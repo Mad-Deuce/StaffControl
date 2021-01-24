@@ -31,6 +31,8 @@
             <td>{{$worker->gender}}</td>
             <td>{{$worker->birthday}}</td>
             <td>{{$worker->start_working}}</td>
+            <td><a href="/worker-delete/{{$worker->id}}">DELETE</a></td>
+            <td><a href="/worker-edit/{{$worker->id}}">EDIT</a></td>
         </tr>
         @endforeach
     </table>
