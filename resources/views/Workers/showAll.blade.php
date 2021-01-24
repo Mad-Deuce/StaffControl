@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Main Page')
+@section('title', 'Workers list')
 
 @section('sidebar_content')
     <ul>
