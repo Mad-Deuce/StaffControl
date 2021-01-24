@@ -12,8 +12,27 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-    @foreach($workers as $worker)
-        {{$worker->tab_number}}
-        {{$worker->name}}
-    @endforeach
+    <table>
+        <tr>
+            <th>Табельный номер</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Отчество</th>
+            <th>Пол</th>
+            <th>Дата рождения</th>
+            <th>Дата начала работы</th>
+        </tr>
+        @foreach($workers as $worker)
+        <tr>
+            <td>{{$worker->tab_number}}</td>
+            <td>{{$worker->name}}</td>
+            <td>{{$worker->surname}}</td>
+            <td>{{$worker->patronymic}}</td>
+            <td>{{$worker->gender}}</td>
+            <td>{{$worker->birthday}}</td>
+            <td>{{$worker->start_working}}</td>
+        </tr>
+        @endforeach
+    </table>
+
 @endsection
