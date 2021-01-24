@@ -12,6 +12,8 @@
         <H1>WORK TIME CONTROL SYSTEM</H1>
     </div>
 
+    <a href="/">to main page</a>
+
     <div class="sidebar">
         @yield('sidebar_content')
     </div>

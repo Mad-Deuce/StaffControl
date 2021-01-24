@@ -12,5 +12,8 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-    Empty
+    @foreach($workers as $worker)
+        {{$worker->tab_number}}
+        {{$worker->name}}
+    @endforeach
 @endsection
