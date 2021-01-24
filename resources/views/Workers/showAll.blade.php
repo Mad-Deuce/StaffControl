@@ -21,6 +21,8 @@
             <th>Пол</th>
             <th>Дата рождения</th>
             <th>Дата начала работы</th>
+            <th></th>
+            <th></th>
         </tr>
         @foreach($workers as $worker)
         <tr>
