@@ -12,7 +12,16 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-     <table width="100%">
+     <table>
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
+         <col width="10">
         <tr>
             <th>Табельный номер</th>
             <th>Имя</th>
