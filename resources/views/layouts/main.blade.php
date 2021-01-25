@@ -15,7 +15,11 @@
     <a href="/">to main page</a>
 
     <div class="sidebar">
-        @yield('sidebar_content')
+        <ul>
+            <li><a href="/worker-list">Workers list</a></li>
+            <li><a href="/schedule">Schedule</a></li>
+            <li><a href="/time-sheet">Time sheet</a></li>
+        </ul>
     </div>
 
     <div class="mainFrame">
