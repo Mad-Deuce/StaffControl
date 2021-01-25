@@ -4,7 +4,7 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-    <form action="">
+    <form action="/worker-add">
         <input type="text" name="worker-name">Имя<Br>
         <input type="text" name="worker-surname">фамилия<Br>
         <input type="text" name="worker-patronymic">Отчество<Br>
