@@ -16,10 +16,6 @@
         </fieldset><Br>
         <input type="number" name="worker-tab_number">Табельный номер<Br>
         <input type="date" name="worker-start_working">Дата принятия на работу<Br>
-        <input type="submit" value="Добавить">Имя<Br>
-
-        'worker-name' &&'worker-surname'&&'worker-patronymic'&&'worker-birthday'&&'worker-gender'&&'worker-tab_number'&&
-'worker-start_working'
-
+        <input type="submit" value="Добавить"><Br>
     </form>
 @endsection

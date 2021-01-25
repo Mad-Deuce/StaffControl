@@ -19,8 +19,7 @@ class WorkerController extends Controller
     }
 
     public function addOne(Request $request){
-        if ($request->has('worker-name' && 'worker-surname' && 'worker-patronymic' && 'worker-birthday' &&
-            'worker-gender' && 'worker-tab_number' && 'worker-start_working')) {
+        if ($request->has('worker-tab_number')) {
             $findWorker=Worker::where('tab_number', $request->worker-tab_number)->first();
             if (isset($findWorker)){
                 $request->session()->flash('status', 'Работник с таким табельным номером существует');
