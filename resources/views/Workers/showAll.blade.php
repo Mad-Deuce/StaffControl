@@ -12,12 +12,7 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-    <form action="/worker-add">
-        <input type="text" name="text">
-        <input type="text" name="text2">
-        <input type="submit">
-    </form>
-    <table>
+     <table width="100%">
         <tr>
             <th>Табельный номер</th>
             <th>Имя</th>
