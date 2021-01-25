@@ -29,6 +29,19 @@
             <th></th>
             <th></th>
         </tr>
+        <tr>
+            <form action="/worker-add">
+                <td><input type="text" name="text"></td>
+                <td><input type="text" name="text2"></td>
+                <td><input type="text" name="tex3"></td>
+                <td><input type="text" name="text4"></td>
+                <td><input type="text" name="text5"></td>
+                <td><input type="text" name="text6"></td>
+                <td><input type="text" name="text7"></td>
+                <td><input type="text" name="text8"></td>
+                <td><input type="submit"></td>
+            </form>
+        </tr>
         @foreach($workers as $worker)
         <tr>
             <td>{{$worker->tab_number}}</td>
