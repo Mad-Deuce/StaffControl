@@ -41,6 +41,6 @@ class WorkerController extends Controller
             }
             echo $request->session()->get('status');
         }
-        return redirect('/worker-list');
+        return redirect('/worker-add');
     }
 }
