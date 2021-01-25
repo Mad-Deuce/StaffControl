@@ -2,6 +2,8 @@
 
 
 namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
 use App\Models\Worker;
 
 class WorkerController extends Controller
@@ -12,6 +14,11 @@ class WorkerController extends Controller
     }
 
     public function deleteOne($id){
+        Worker::destroy($id);
+        return redirect('/worker-list');
+    }
+
+    public function addOne(Request $request){
         Worker::destroy($id);
         return redirect('/worker-list');
     }
