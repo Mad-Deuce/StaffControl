@@ -24,7 +24,7 @@ class WorkerController extends Controller
             $findWorker=Worker::where('tab_number', $request->worker-tab_number)->first();
             if (isset($findWorker)){
                 $request->session()->flash('status', 'Работник с таким табельным номером существует');
-                return view ('Worker.addOne');
+                return view ('Workers.addOne');
             } else {
                 $worker = new Worker;
                 $worker->name=$request->worker-name;
@@ -41,6 +41,6 @@ class WorkerController extends Controller
             }
             echo $request->session()->get('status');
         }
-        return view ('Worker.addOne');
+        return view ('Workers.addOne');
     }
 }
