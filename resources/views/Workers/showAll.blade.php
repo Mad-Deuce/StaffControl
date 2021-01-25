@@ -38,5 +38,6 @@
         </tr>
         @endforeach
     </table>
-
+    <td><a href="/worker-add">ADD</a></td>
+    <td><a href="/worker-import">IMPORT FROM *.xls</a></td>
 @endsection
