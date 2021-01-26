@@ -26,7 +26,7 @@
             <td>{{$worker->gender}}</td>
             <td>{{$worker->birthday}}</td>
             <td>{{$worker->start_working}}</td>
-            <td>{{$worker->short_title}}</td>
+            <td>{{$worker->position->short_title}}</td>
             <td><a href="/worker-delete/{{$worker->id}}">DELETE</a></td>
             <td><a href="/worker-edit/{{$worker->id}}">EDIT</a></td>
         </tr>
