@@ -12,6 +12,6 @@ class Worker extends \Illuminate\Database\Eloquent\Model
 
     public function position() {
 
-        return $this->hasOne('App\Models\Position');
+        return $this->belongsTo('App\Models\Position');
     }
 }
