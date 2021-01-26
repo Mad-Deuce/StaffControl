@@ -12,7 +12,7 @@ class Position extends \Illuminate\Database\Eloquent\Model
 
     public function worker()
     {
-        return $this->belongsTo('App\Worker');
+        return $this->belongsTo('App\Models\Worker');
     }
 
 }
