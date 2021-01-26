@@ -19,27 +19,36 @@ class WorkerController extends Controller
     }
 
     public function addOne(Request $request){
-        if ($request->has('tab_number')) {
-            $findWorker=Worker::where('tab_number', $request->tab_number)->first();
-            if (isset($findWorker)){
-                $request->session()->flash('status', 'Работник с таким табельным номером существует');
-                return view ('Workers.addOne');
-            } else {
-                $worker = new Worker;
-                $worker->name=$request->name;
-                $worker->surname=$request->surname;
-                $worker->patronymic=$request->patronymic;
-                $worker->birthday=$request->birthday;
-                $worker->gender=$request->gender;
-                $worker->tab_number=$request->tab_number;
-                $worker->start_working=$request->start_working;
-                $worker->save();
+        if ($request->has('worker_add')) {
+            if (isset($request->tab_number)) {
+                $findWorker = Worker::where('tab_number', $request->tab_number)->first();
+                if (isset($findWorker)) {
+                    $request->session()->flash('status', 'Работник с таким табельным номером существует');
+                    echo $request->session()->get('status');
+                    return view('Workers.addOne');
+                } else {
+                    $worker = new Worker;
+                    $worker->name = $request->name;
+                    $worker->surname = $request->surname;
+                    $worker->patronymic = $request->patronymic;
+                    $worker->birthday = $request->birthday;
+                    $worker->gender = $request->gender;
+                    $worker->tab_number = $request->tab_number;
+                    $worker->start_working = $request->start_working;
+                    $worker->save();
 
-                $request->session()->flash('status', 'Работник добавлен');
-                return redirect('/worker-list');
+                    $request->session()->flash('status', 'Работник добавлен');
+                    echo $request->session()->get('status');
+                    return redirect('/worker-list');
+                }
+
+            } else {
+                $request->session()->flash('status', 'ВВедите табельный номер и остальные данные');
+                echo $request->session()->get('status');
+                return view('Workers.addOne');
             }
-            echo $request->session()->get('status');
+        } else {
+            return view('Workers.addOne');
         }
-        return view ('Workers.addOne');
     }
 }
