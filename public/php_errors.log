@@ -1,0 +1,1 @@
+[24-Jan-2021 19:35:06 UTC] PHP Fatal error:  Trait 'App\Models\SoftDeletes' not found in /var/www/host3.localhost/StaffControl/app/Models/Worker.php on line 7
