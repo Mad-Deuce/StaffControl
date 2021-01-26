@@ -13,6 +13,7 @@
             <th>Пол</th>
             <th>Дата рождения</th>
             <th>Дата начала работы</th>
+            <th>Должность</th>
             <th></th>
             <th></th>
         </tr>
@@ -25,6 +26,7 @@
             <td>{{$worker->gender}}</td>
             <td>{{$worker->birthday}}</td>
             <td>{{$worker->start_working}}</td>
+            <td>{{$worker->short_title}}</td>
             <td><a href="/worker-delete/{{$worker->id}}">DELETE</a></td>
             <td><a href="/worker-edit/{{$worker->id}}">EDIT</a></td>
         </tr>
