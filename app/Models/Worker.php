@@ -11,7 +11,6 @@ class Worker extends \Illuminate\Database\Eloquent\Model
     protected $dates=['deleted_at'];
 
     public function position() {
-
         return $this->belongsTo('App\Models\Position');
     }
 }

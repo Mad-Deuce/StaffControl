@@ -20,13 +20,14 @@ class WorkerController extends Controller
     }
 
     public function addOne(Request $request){
+        $positions = Position::all();
         if ($request->has('worker_add')) {
             if (isset($request->tab_number)) {
                 $findWorker = Worker::where('tab_number', $request->tab_number)->first();
                 if (isset($findWorker)) {
                     $request->session()->flash('status', 'Работник с таким табельным номером существует');
                     echo $request->session()->get('status');
-                    return view('Workers.addOne');
+                    return view('Workers.addOne', ['positions'=>$positions]);
                 } else {
                     $worker = new Worker;
                     $worker->name = $request->name;
@@ -46,10 +47,10 @@ class WorkerController extends Controller
             } else {
                 $request->session()->flash('status', 'ВВедите табельный номер и остальные данные');
                 echo $request->session()->get('status');
-                return view('Workers.addOne');
+                return view('Workers.addOne', ['positions'=>$positions]);
             }
         } else {
-            return view('Workers.addOne');
+            return view('Workers.addOne', ['positions'=>$positions]);
         }
     }
 }

@@ -16,6 +16,11 @@
         </fieldset><Br>
         <input type="number" name="tab_number">Табельный номер<Br>
         <input type="date" name="start_working">Дата принятия на работу<Br>
+        @foreach($positions as $position)
+        <select name="position">
+            <option>{{$position->short_title}}</option>
+        </select>
+        @endforeach
         <input type="submit" value="Добавить" name="worker_add"><Br>
     </form>
 @endsection
