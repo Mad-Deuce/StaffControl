@@ -13,10 +13,16 @@ class CreateModeCodesTable extends Migration
      */
     public function up()
     {
-        Schema::create('mode_codes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (Schema::hasTable('mode_codes')==false) {
+            Schema::create('mode_codes', function (Blueprint $table) {
+                $table->id();
+                $table->string('full_title');
+                $table->string('short_title');
+                $table->integer('num_title');
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**

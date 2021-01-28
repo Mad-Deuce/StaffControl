@@ -19,7 +19,7 @@ class CreateModesTable extends Migration
                 $table->bigInteger('user_id');
                 $table->date('start_mode');
                 $table->date('end_mode');
-                $table->bigInteger('mode_id');
+                $table->bigInteger('mode_codes_id');
                 $table->timestamps();
                 $table->softDeletes();
             });
