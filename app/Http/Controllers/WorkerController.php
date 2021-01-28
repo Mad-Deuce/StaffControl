@@ -37,6 +37,10 @@ class WorkerController extends Controller
                     $worker->gender = $request->gender;
                     $worker->tab_number = $request->tab_number;
                     $worker->start_working = $request->start_working;
+                    //
+                    //$worker->position
+                    $positionId=Position::where('short_title', $request->position)->first();
+                    $worker->position_id=$positionId->id;
                     $worker->save();
 
                     $request->session()->flash('status', 'Работник добавлен');

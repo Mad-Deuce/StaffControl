@@ -18,7 +18,7 @@
         <input type="date" name="start_working">Дата принятия на работу<Br>
         @foreach($positions as $position)
         <select name="position">
-            <option>{{$position->short_title}}</option>
+            <option>{{$position->short_title}}</option><Br>
         </select>
         @endforeach
         <input type="submit" value="Добавить" name="worker_add"><Br>
