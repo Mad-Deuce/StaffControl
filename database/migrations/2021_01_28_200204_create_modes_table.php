@@ -13,10 +13,17 @@ class CreateModesTable extends Migration
      */
     public function up()
     {
-        Schema::create('modes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (Schema::hasTable('modes')==false) {
+            Schema::create('modes', function (Blueprint $table) {
+                $table->id();
+                $table->bigint('user_id');
+                $table->date('start_mode');
+                $table->date('end_mode');
+                $table->bigint('mode_id');
+                $table->timestamps();
+                $table->softDeletes();
+            });
+        }
     }
 
     /**
