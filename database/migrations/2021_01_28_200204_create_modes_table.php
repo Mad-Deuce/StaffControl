@@ -16,10 +16,10 @@ class CreateModesTable extends Migration
         if (Schema::hasTable('modes')==false) {
             Schema::create('modes', function (Blueprint $table) {
                 $table->id();
-                $table->bigint('user_id');
+                $table->bigInteger('user_id');
                 $table->date('start_mode');
                 $table->date('end_mode');
-                $table->bigint('mode_id');
+                $table->bigInteger('mode_id');
                 $table->timestamps();
                 $table->softDeletes();
             });
