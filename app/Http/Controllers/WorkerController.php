@@ -39,7 +39,7 @@ class WorkerController extends Controller
                     $worker->start_working = $request->start_working;
                     //
                     //$worker->position
-                    $positionId=Position::where('short_title', $request->position)->first();
+                    $positionId=Position::where('full_title', $request->position)->first();
                     $worker->position_id=$positionId->id;
                     $worker->save();
 
