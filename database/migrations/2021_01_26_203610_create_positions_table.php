@@ -13,13 +13,19 @@ class CreatePositionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('positions', function (Blueprint $table) {
-            $table->id();
-            $table->string('short_title');
-            $table->string('full_title');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        if (Schema::hasTable('positions')==false) {
+            //
+            Schema::create('positions', function (Blueprint $table) {
+                $table->id();
+                $table->string('short_title');
+                $table->string('full_title');
+                $table->timestamps();
+                $table->softDeletes();
+            });
+
+        }
+
+
     }
 
     /**
