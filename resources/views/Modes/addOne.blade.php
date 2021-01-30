@@ -5,7 +5,7 @@
 @section('mainFrame_content')
     <h4>Main Frame</h4>
     <h5>{{$worker->surname}} {{$worker->name}} {{$worker->patronymic}}</h5>
-    <form action="/mode-add">
+    <form action="/mode-add/{{$worker->id}}">
         <fieldset>
             <legend>Период</legend>
                 с-<input type="date" name="start_mode"><Br>
