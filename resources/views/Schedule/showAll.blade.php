@@ -21,8 +21,7 @@
                  <td>{{$loop->iteration}}</td>
                  <td>
                      {{$worker->surname}}
-                     {{($worker->name)}}.
-                     {{ substr(strval($worker->patronymic),4,1) }}.
+                     {{($worker->initials)}}
                  </td>
              </tr>
          @endforeach
