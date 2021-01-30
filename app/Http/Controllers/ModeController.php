@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 class ModeController extends Controller
 {
     //
-    public function addOne(Request $request){
-        $positions = Position::all();
-        if ($request->has('worker_add')) {
+    public function addOne($worker_id){
+        $worker = Worker::where('id', $worker_id)->first();
+        if ($request->has('mode_add')) {
             if (isset($request->tab_number)) {
                 $findWorker = Worker::where('tab_number', $request->tab_number)->first();
                 if (isset($findWorker)) {
@@ -44,7 +44,7 @@ class ModeController extends Controller
                 return view('Workers.addOne', ['positions'=>$positions]);
             }
         } else {
-            return view('Workers.addOne', ['positions'=>$positions]);
+            return view('Modes.addOne', ['positions'=>$positions]);
         }
     }
 

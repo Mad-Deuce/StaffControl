@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Mode_code extends Model
 {
     use HasFactory;
+
+    public function mode() {
+        return $this->hasMany('App\Models\Mode');
+    }
 }
