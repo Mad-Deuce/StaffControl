@@ -15,7 +15,8 @@ class ScheduleController extends Controller
                                         positions.short_title as position
                                 from workers
                                 join positions
-                                on workers.position_id=positions.id');
+                                on workers.position_id=positions.id
+                                where worker.deleted=\'NULL\'');
         return view('Schedule.showAll', ['workers'=>$workers]);
     }
 }
