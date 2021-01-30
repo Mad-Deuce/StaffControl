@@ -23,7 +23,7 @@ class ModeController extends Controller
             $mode->end_mode = $request->end_mode;
             $mode->mode_code_id=$request->mode_code;
             $mode->save();
-            return redirect('/worker-list');
+            return redirect('/schedule');
 
         } else {
             return view('Modes.addOne', ['worker'=>$worker, 'mode_codes'=>$mode_codes]);
