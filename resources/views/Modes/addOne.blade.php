@@ -11,18 +11,18 @@
                 с-<input type="date" name="start_mode"><Br>
                 по-<input type="date" name="end_mode"><Br>
         </fieldset><Br>
-        <fieldset>
+{{--        <fieldset>
             <legend>Отработано</legend>
             <select name="mode_code_app">
                 @foreach($mode_codes_app as $mode_code)
                     <option value="{{$mode_code->id}}">{{$mode_code->short_title}} - {{$mode_code->full_title}}</option><B-r>
                 @endforeach
             </select>
-        </fieldset><Br>
+        </fieldset><Br>--}}
         <fieldset>
             <legend>Неявки</legend>
-            <select name="mode_code_non_app">
-                @foreach($mode_codes_non_app as $mode_code)
+            <select name="mode_code">
+                @foreach($mode_codes as $mode_code)
                     <option value="{{$mode_code->id}}">{{$mode_code->short_title}} - {{$mode_code->full_title}}</option><B-r>
                 @endforeach
             </select>
