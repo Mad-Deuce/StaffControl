@@ -13,9 +13,9 @@
         </fieldset><Br>
         <fieldset>
             <legend>Неявки</legend>
-            <select name="position">
+            <select name="mode_code">
                 @foreach($mode_codes as $mode_code)
-                    <option value="{{$mode_code->id}}">{{$mode_code->short_title}}-{{$mode_code->full_title}}</option><B-r>
+                    <option value="{{$mode_code->id}}">{{$mode_code->short_title}} - {{$mode_code->full_title}}</option><B-r>
                 @endforeach
             </select>
         </fieldset><Br>
