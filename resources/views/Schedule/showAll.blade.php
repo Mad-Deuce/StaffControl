@@ -22,7 +22,7 @@
                  <td>
                      {{$worker->surname}}
                      {{($worker->name)}}.
-                     {{substr(strval($worker->patronymic),1,1)}}.
+                     {{substr(strval($worker->patronymic),4,1)}}.
                  </td>
              </tr>
          @endforeach
