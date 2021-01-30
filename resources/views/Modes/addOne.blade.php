@@ -4,6 +4,7 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
+    <h6>{{$worker->name}} {{$worker->surname}} {{$worker->patronymic}} </h6>
     <form action="/mode-add">
         <input type="text" name="name">Имя<Br>
         <input type="text" name="surname">фамилия<Br>
