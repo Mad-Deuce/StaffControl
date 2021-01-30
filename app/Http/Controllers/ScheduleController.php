@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Worker;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ScheduleController extends Controller
 {
