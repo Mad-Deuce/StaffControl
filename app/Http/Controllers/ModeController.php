@@ -17,7 +17,7 @@ class ModeController extends Controller
                 if (isset($findWorker)) {
                     $request->session()->flash('status', 'Работник с таким табельным номером существует');
                     echo $request->session()->get('status');
-                    return view('Workers.addOne', ['positions'=>$positions]);
+                    return view('Modes.addOne', ['worker'=>$worker]);
                 } else {
                     $worker = new Worker;
                     $worker->name = $request->name;
@@ -41,10 +41,10 @@ class ModeController extends Controller
             } else {
                 $request->session()->flash('status', 'ВВедите табельный номер и остальные данные');
                 echo $request->session()->get('status');
-                return view('Workers.addOne', ['positions'=>$positions]);
+                return view('Modes.addOne', ['worker'=>$worker]);
             }
         } else {
-            return view('Modes.addOne', ['positions'=>$positions]);
+            return view('Modes.addOne', ['worker'=>$worker]);
         }
     }
 
