@@ -15,6 +15,18 @@
             <th>Години</th>
             <th>Підпис</th>
         </tr>
+
+         @foreach($workers as $worker)
+             <tr>
+                 <td>{{$loop->iteration}}</td>
+                 <td>
+                     {{$worker->surname}}
+                     {{$worker->name[1]}}.
+                     {{$worker->patronymic[1]}}.
+                 </td>
+             </tr>
+         @endforeach
+
     </table>
     <td><a href="/worker-add">ADD</a></td><BR>
     <td><a href="/worker-import">IMPORT FROM *.xls</a></td><BR>
