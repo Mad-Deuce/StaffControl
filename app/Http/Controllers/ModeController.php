@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ModeController extends Controller
 {
     //
-    public function addOne($worker_id){
+    public function addOne($worker_id, Request $request){
         $worker = Worker::where('id', $worker_id)->first();
         if ($request->has('mode_add')) {
             if (isset($request->tab_number)) {
