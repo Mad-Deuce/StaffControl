@@ -24,6 +24,8 @@
                      {{($worker->initials)}}
                  </td>
                  <td>{{$worker->position}}</td>
+                 <td></td>
+                 <td></td>
                  @for ($i = 1; $i < 32; $i++)
                      <td>8</td>
                  @endfor
