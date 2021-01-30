@@ -22,3 +22,4 @@ Route::get('/worker-list', [WorkerController::class, 'showAll']);
 Route::get('/worker-delete/{id}', [WorkerController::class, 'deleteOne']);
 Route::get('/worker-add', [WorkerController::class, 'addOne']);
 
+Route::get('/schedule', [ScheduleController::class, 'showAll']);
