@@ -6,8 +6,11 @@
     <h4>Main Frame</h4>
     <h5>{{$worker->surname}} {{$worker->name}} {{$worker->patronymic}}</h5>
     <form action="/mode-add">
-        <input type="text" name="name">Имя<Br>
-        <input type="text" name="surname">фамилия<Br>
+        <fieldset>
+            <legend>Период</legend>
+                с-<input type="date" name="start_mode"><Br>
+                по-<input type="date" name="surname"><Br>
+        </fieldset><Br>
         <input type="text" name="patronymic">Отчество<Br>
         <input type="date" name="birthday">Дата рождения<Br>
         <fieldset>
