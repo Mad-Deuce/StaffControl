@@ -23,6 +23,7 @@
                      {{$worker->surname}}
                      {{($worker->initials)}}
                  </td>
+                 <td>{{$worker->position}}</td>
              </tr>
          @endforeach
 

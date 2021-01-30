@@ -10,7 +10,12 @@ class ScheduleController extends Controller
 {
     public function showAll(){
         //$workers=Worker::all();
-        $workers = DB::select('select id, surname, (substring (name,1,1)||\'.\'|| substring (patronymic,1,1)||\'.\') as initials from workers');
+        $workers = DB::select(' select  workers.id,
+                                        surname, (substring (name,1,1)||\'.\'|| substring (patronymic,1,1)||\'.\') as initials,
+                                        positions.short_title as position
+                                from workers
+                                join positions
+                                on workers.position_id=positions.id');
         return view('Schedule.showAll', ['workers'=>$workers]);
     }
 }
