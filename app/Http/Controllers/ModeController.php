@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Position;
 use App\Models\Worker;
+use App\Models\Mode;
 use Illuminate\Http\Request;
 
 class ModeController extends Controller
@@ -11,6 +12,8 @@ class ModeController extends Controller
     //
     public function addOne($worker_id, Request $request){
         $worker = Worker::where('id', $worker_id)->first();
+        $mode_codes = Mode_code::all();
+
         if ($request->has('mode_add')) {
             if (isset($request->tab_number)) {
                 $findWorker = Worker::where('tab_number', $request->tab_number)->first();
@@ -43,8 +46,9 @@ class ModeController extends Controller
                 echo $request->session()->get('status');
                 return view('Modes.addOne', ['worker'=>$worker]);
             }
+
         } else {
-            return view('Modes.addOne', ['worker'=>$worker]);
+            return view('Modes.addOne', ['worker'=>$worker, 'mode_codes'=>$mode_codes]);
         }
     }
 

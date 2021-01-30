@@ -11,17 +11,15 @@
                 с-<input type="date" name="start_mode"><Br>
                 по-<input type="date" name="surname"><Br>
         </fieldset><Br>
-        <input type="text" name="patronymic">Отчество<Br>
-        <input type="date" name="birthday">Дата рождения<Br>
         <fieldset>
-            <legend>Пол</legend>
-            <input type="radio" name="gender" value="ч">ч
-            <input type="radio" name="gender" value="ж">ж
+            <legend>Неявки</legend>
+            <select name="position">
+                @foreach($mode_codes as $mode_code)
+                    <option value="{{$mode_code->id}}">{{$mode_code->short_title}}-{{$mode_code->full_title}}</option><B-r>
+                @endforeach
+            </select>
         </fieldset><Br>
-        <input type="number" name="tab_number">Табельный номер<Br>
-        <input type="date" name="start_working">Дата принятия на работу<Br>
-        <select name="position">
-        </select>
-        <input type="submit" value="Добавить" name="worker_add"><Br>
+
+        <input type="submit" value="Добавить" name="mode_add"><Br>
     </form>
 @endsection
