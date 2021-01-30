@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Position;
 use App\Models\Worker;
-use App\Models\Mode;
+use App\Models\Mode_code;
 use Illuminate\Http\Request;
 
 class ModeController extends Controller
