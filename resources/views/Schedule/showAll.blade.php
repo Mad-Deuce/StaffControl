@@ -4,7 +4,7 @@
 
 @section('mainFrame_content')
     <h4>Main Frame</h4>
-     <table>
+     <table border="1">
         <tr>
             <th>№ з/п</th>
             <th>Прізвище,<BR>ініціали</th>
