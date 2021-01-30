@@ -17,7 +17,7 @@ class ModeController extends Controller
 
         if ($request->has('mode_add')) {
             $mode = new Mode;
-            $mode->worker_id = $request->id;
+            $mode->worker_id = $worker_id;
             $mode->start_mode = $request->start_mode;
             $mode->end_mode = $request->end_mode;
             $mode->mode_code_id=$request->mode_code;
