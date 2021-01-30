@@ -9,7 +9,7 @@
         <fieldset>
             <legend>Период</legend>
                 с-<input type="date" name="start_mode"><Br>
-                по-<input type="date" name="start_mode"><Br>
+                по-<input type="date" name="end_mode"><Br>
         </fieldset><Br>
         <fieldset>
             <legend>Неявки</legend>
