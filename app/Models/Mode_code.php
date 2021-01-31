@@ -12,4 +12,8 @@ class Mode_code extends Model
     public function mode() {
         return $this->hasMany('App\Models\Mode');
     }
+
+    public function schedule() {
+        return $this->hasMany('App\Models\Schedule');
+    }
 }

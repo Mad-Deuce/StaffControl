@@ -17,4 +17,8 @@ class Worker extends \Illuminate\Database\Eloquent\Model
     public function mode() {
         return $this->hasMany('App\Models\Mode');
     }
+
+    public function schedule() {
+        return $this->hasMany('App\Models\Schedule');
+    }
 }
