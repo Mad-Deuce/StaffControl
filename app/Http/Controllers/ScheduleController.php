@@ -27,7 +27,7 @@ class ScheduleController extends Controller
         $firstDayOfMonth=date_create('2021-01-01');
         $lastDayOfMonth=date_create('2021-01-31');
 
-/*        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
+        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                             where('end_mode','<=', $lastDayOfMonth)->get();
         if (isset($findModes1)) {
             foreach ($findModes1 as $findMode) {
@@ -37,7 +37,7 @@ class ScheduleController extends Controller
                     $findSchedule1=Schedule::where('worker_id', $findMode->worker_id)->
                                              where('day_of_month', $i)->
                                              where('mode_code_id', $findMode->mode_code_id)->first();
-                    if (isset($findSchedule1)==false) {
+                    if (isset($findSchedule1)===false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
@@ -59,7 +59,7 @@ class ScheduleController extends Controller
                     $findSchedule2=Schedule::where('worker_id', $findMode->worker_id)->
                                              where('day_of_month', $i)->
                                              where('mode_code_id', $findMode->mode_code_id)->first();
-                    if (isset($findSchedule2)==false) {
+                    if (isset($findSchedule2)===false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
@@ -81,7 +81,7 @@ class ScheduleController extends Controller
                     $findSchedule3=Schedule::where('worker_id', $findMode->worker_id)->
                                              where('day_of_month', $i)->
                                              where('mode_code_id', $findMode->mode_code_id)->first();
-                    if (isset($findSchedule3)==false) {
+                    if (isset($findSchedule3)===false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
@@ -91,7 +91,7 @@ class ScheduleController extends Controller
                 }
                 echo ('OK');
             }
-        }*/
+        }
 
         $findModes4 = Mode:: where('start_mode','<', $firstDayOfMonth)->
                             where('end_mode','>', $lastDayOfMonth)->get();
@@ -103,7 +103,7 @@ class ScheduleController extends Controller
                     $findSchedule4=Schedule::where('worker_id', $findMode->worker_id)->
                                              where('day_of_month', $i)->
                                              where('mode_code_id', $findMode->mode_code_id)->first();
-                    if (isset($findSchedule4)==false) {
+                    if (isset($findSchedule4)===false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
@@ -114,12 +114,12 @@ class ScheduleController extends Controller
                 echo ('OK');
             }
         }
-/*        print_r($findModes1->toArray());
+        print_r($findModes1->toArray());
         echo ('<BR>');
         print_r($findModes2->toArray());
         echo ('<BR>');
         print_r($findModes3->toArray());
-        echo ('<BR>');*/
+        echo ('<BR>');
         print_r($findModes4->toArray());
     }
 
