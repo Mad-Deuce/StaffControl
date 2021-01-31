@@ -35,7 +35,10 @@ class ScheduleController extends Controller
                     $schedule->save();
                 }
             }
+        } else {
+            return ('$findModes is null');
         }
+
     }
 
 }
