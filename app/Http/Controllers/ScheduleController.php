@@ -33,9 +33,9 @@ class ScheduleController extends Controller
                 $i = date_create($findMode->start_mode);
                 $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    $findSchedule1=Schedule::where('worker_id','=',$findMode->worker_id)->
-                                            where('day_of_month','=',$i)->
-                                            where('mode_code_id','=',$findMode->mode_code_id)->first();
+                    $findSchedule1=Schedule::where('worker_id', $findMode->worker_id)->
+                                             where('day_of_month', $i)->
+                                             where('mode_code_id', $findMode->mode_code_id)->first();
                     if (isset($findSchedule1)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
@@ -55,9 +55,9 @@ class ScheduleController extends Controller
                 $i = $firstDayOfMonth;
                 $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    $findSchedule2=Schedule::where('worker_id','=',$findMode->worker_id)->
-                                            where('day_of_month','=',$i)->
-                                            where('mode_code_id','=',$findMode->mode_code_id)->first();
+                    $findSchedule2=Schedule::where('worker_id', $findMode->worker_id)->
+                                             where('day_of_month', $i)->
+                                             where('mode_code_id', $findMode->mode_code_id)->first();
                     if (isset($findSchedule2)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
@@ -77,9 +77,9 @@ class ScheduleController extends Controller
                 $i = date_create($findMode->start_mode);
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    $findSchedule3=Schedule::where('worker_id','=',$findMode->worker_id)->
-                                            where('day_of_month','=',$i)->
-                                            where('mode_code_id','=',$findMode->mode_code_id)->first();
+                    $findSchedule3=Schedule::where('worker_id', $findMode->worker_id)->
+                                             where('day_of_month', $i)->
+                                             where('mode_code_id', $findMode->mode_code_id)->first();
                     if (isset($findSchedule3)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
@@ -99,9 +99,9 @@ class ScheduleController extends Controller
                 $i = $firstDayOfMonth;
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    $findSchedule4=Schedule::where('worker_id','=',$findMode->worker_id)->
-                                            where('day_of_month','=',$i)->
-                                            where('mode_code_id','=',$findMode->mode_code_id)->first();
+                    $findSchedule4=Schedule::where('worker_id', $findMode->worker_id)->
+                                             where('day_of_month', $i)->
+                                             where('mode_code_id', $findMode->mode_code_id)->first();
                     if (isset($findSchedule4)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
