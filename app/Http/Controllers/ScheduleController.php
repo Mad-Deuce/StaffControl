@@ -23,6 +23,7 @@ class ScheduleController extends Controller
     }
 
     public function add_from_modes(){
+
         $firstDayOfMonth=date_create('2021-01-01');
         $lastDayOfMonth=date_create('2021-01-31');
 
@@ -113,13 +114,13 @@ class ScheduleController extends Controller
                 echo ('OK');
             }
         }
-        print_r($findModes1);
+        print_r($findModes1->toArray());
         echo ('<BR>');
-        print_r($findModes2);
+        print_r($findModes2->toArray());
         echo ('<BR>');
-        print_r($findModes3);
+        print_r($findModes3->toArray());
         echo ('<BR>');
-        print_r($findModes4);
+        print_r($findModes4->toArray());
     }
 
 }
