@@ -37,8 +37,8 @@ class ScheduleController extends Controller
                 echo ('<BR>');
                 print_r ($k);
                 echo ('<BR>');
-                $z=date_add($i, date_interval_create_from_date_string("1 day"));
-                print_r ($z);
+                $i=date_add($i, date_interval_create_from_date_string("1 day"));
+                print_r ($i);
                 echo ('<BR>');
                 //echo ($i=$findMode['end_mode']);
                 for ($i; $i<=$k;$i=date_add($i, date_interval_create_from_date_string("1 day"))) {
