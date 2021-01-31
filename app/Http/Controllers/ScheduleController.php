@@ -33,6 +33,7 @@ class ScheduleController extends Controller
                     $schedule->day_of_month = $i;
                     $schedule->mode_code_id = $findMode->mode_code_id;
                     $schedule->save();
+                    return ('OK');
                 }
             }
         } else {
