@@ -41,7 +41,7 @@ class ScheduleController extends Controller
                 print_r ($z);
                 echo ('<BR>');
                 //echo ($i=$findMode['end_mode']);
-                for ($h= 1; $h<=7; $h++) {
+                for ($h= 0; $h<=$z; $h++) {
                     echo ($h);
                     $schedule=new Schedule();
                     $schedule->worker_id = $findMode['worker_id'];
@@ -51,7 +51,7 @@ class ScheduleController extends Controller
                     //return ('OK');
                     $i=date_add($i, date_interval_create_from_date_string("1 day"));
                 }
-                return ('OK');
+                echo ('OK');
             }
         } else {
             return ('$findModes is null');
