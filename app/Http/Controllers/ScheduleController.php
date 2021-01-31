@@ -26,10 +26,10 @@ class ScheduleController extends Controller
         $firstDayOfMonth=date_create('2021-01-01');
         $lastDayOfMonth=date_create('2021-01-31');
 
-        $findModes = Mode:: where('start_mode','>=', $firstDayOfMonth)->
+        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                             where('end_mode','<=', $lastDayOfMonth)->get();
-        if (isset($findModes)) {
-            foreach ($findModes as $findMode) {
+        if (isset($findModes1)) {
+            foreach ($findModes1 as $findMode) {
                 $i = date_create($findMode->start_mode);
                 $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
@@ -48,10 +48,10 @@ class ScheduleController extends Controller
             }
         }
 
-        $findModes = Mode:: where('start_mode','<', $firstDayOfMonth)->
+        $findModes2 = Mode:: where('start_mode','<', $firstDayOfMonth)->
                             where('end_mode','<=', $lastDayOfMonth)->get();
-        if (isset($findModes)) {
-            foreach ($findModes as $findMode) {
+        if (isset($findModes2)) {
+            foreach ($findModes2 as $findMode) {
                 $i = $firstDayOfMonth;
                 $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
@@ -70,10 +70,10 @@ class ScheduleController extends Controller
             }
         }
 
-        $findModes = Mode:: where('start_mode','>=', $firstDayOfMonth)->
+        $findModes3 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                             where('end_mode','>', $lastDayOfMonth)->get();
-        if (isset($findModes)) {
-            foreach ($findModes as $findMode) {
+        if (isset($findModes3)) {
+            foreach ($findModes3 as $findMode) {
                 $i = date_create($findMode->start_mode);
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
@@ -92,10 +92,10 @@ class ScheduleController extends Controller
             }
         }
 
-        $findModes = Mode:: where('start_mode','<', $firstDayOfMonth)->
+        $findModes4 = Mode:: where('start_mode','<', $firstDayOfMonth)->
                             where('end_mode','>', $lastDayOfMonth)->get();
-        if (isset($findModes)) {
-            foreach ($findModes as $findMode) {
+        if (isset($findModes4)) {
+            foreach ($findModes4 as $findMode) {
                 $i = $firstDayOfMonth;
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
@@ -113,7 +113,13 @@ class ScheduleController extends Controller
                 echo ('OK');
             }
         }
-        print_r($findModes);
+        print_r($findModes1);
+        echo ('<BR>');
+        print_r($findModes2);
+        echo ('<BR>');
+        print_r($findModes3);
+        echo ('<BR>');
+        print_r($findModes4);
     }
 
 }
