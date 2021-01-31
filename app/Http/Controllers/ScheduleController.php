@@ -31,10 +31,11 @@ class ScheduleController extends Controller
             foreach ($findModes as $findMode) {
                 print_r($findMode);
                 echo ('<BR>');
-                echo ($i=$findMode['start_mode']);
+                $i = date_create($findMode['start_mode']);
+                echo ($i);
                 echo ($i=date_add($i, date_interval_create_from_date_string("1 day")));
-                echo ($i=$findMode['end_mode']);
-                for ($i=$findMode['start_mode']; $i<=$findMode['end_mode'];$i=date_add($i, DateInterval('P1D'))) {
+                //echo ($i=$findMode['end_mode']);
+                for ($i; $i<=date_create($findMode['end_mode']);$i=date_add($i, DateInterval('P1D'))) {
                     $schedule=new Schedule();
                     $schedule->worker_id = $findMode['worker_id'];
                     $schedule->day_of_month = $i;
