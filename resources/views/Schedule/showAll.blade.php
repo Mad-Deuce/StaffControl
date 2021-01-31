@@ -30,11 +30,9 @@
                  @endfor
                  <td></td>
                  <td></td>
-                 <td><a href="/mode-add/{{$worker->id}}">ADD MODE</a></td>
+                 <td><a href="/mode-add/{{$worker->id}}">Добавить неявку</a></td>
              </tr>
          @endforeach
-
     </table>
-    <td><a href="/worker-add">ADD</a></td><BR>
-    <td><a href="/worker-import">IMPORT FROM *.xls</a></td><BR>
+    <a href="/schedule/add_from_modes">Вставить неявки</a>
 @endsection
