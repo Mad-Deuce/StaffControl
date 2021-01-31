@@ -23,8 +23,8 @@ class ScheduleController extends Controller
     }
 
     public function add_from_modes(){
-        $firstDayOfMonth='2021-01-01';
-        $lastDayOfMonth='2021-01-31';
+        $firstDayOfMonth=date_create('2021-01-01');
+        $lastDayOfMonth=date_create('2021-01-31');
         $findModes = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                             where('end_mode','<=', $lastDayOfMonth)->get();
         if (isset($findModes)) {
