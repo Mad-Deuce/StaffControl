@@ -13,10 +13,17 @@ class CreateScheduleTable extends Migration
      */
     public function up()
     {
-        Schema::create('schedule', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-        });
+        if (Schema::hasTable('schedules')==false) {
+            Schema::create('schedules', function (Blueprint $table) {
+                $table->id();
+                $table->bigInteger('user_id');
+                $table->date('day_of_month');
+                $table->bigInteger('mode_codes_id');
+                $table->timestamps();
+            });
+
+
+        }
     }
 
     /**
@@ -26,6 +33,6 @@ class CreateScheduleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('schedule');
+        Schema::dropIfExists('schedules');
     }
 }
