@@ -23,7 +23,6 @@ class ScheduleController extends Controller
     }
 
     public function add_from_modes(){
-        //$schedule=new Schedule();
         $findModes = Mode::where('start_mode','>=', '2021-01-01')->where('end_mode','<=', '2021-01-31')->get()->toArray();
         print_r($findModes);
         echo ('<BR>');
@@ -41,15 +40,14 @@ class ScheduleController extends Controller
                 print_r ($z);
                 echo ('<BR>');
                 //echo ($i=$findMode['end_mode']);
-                for ($h= 0; $h<=$z; $h++) {
-                    echo ($h);
+                for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
+                    echo ($i);
                     $schedule=new Schedule();
                     $schedule->worker_id = $findMode['worker_id'];
                     $schedule->day_of_month = $i;
                     $schedule->mode_code_id = $findMode['mode_code_id'];
                     $schedule->save();
-                    //return ('OK');
-                    $i=date_add($i, date_interval_create_from_date_string("1 day"));
+                    //$i=date_add($i, date_interval_create_from_date_string("1 day"));
                 }
                 echo ('OK');
             }
