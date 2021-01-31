@@ -100,8 +100,8 @@ class ScheduleController extends Controller
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id','=',$findMode->worker_id)->
-                    where('day_of_month','=',$i)->
-                    where('mode_code_id','=',$findMode->mode_code_id)->first();
+                                            where('day_of_month','=',$i)->
+                                            where('mode_code_id','=',$findMode->mode_code_id)->first();
                     if (isset($findSchedule)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
