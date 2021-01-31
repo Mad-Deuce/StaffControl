@@ -116,7 +116,7 @@ class ScheduleController extends Controller
             }
             echo ('Неявки не найдены');
         }
-
+        print_r($findModes);
     }
 
 }
