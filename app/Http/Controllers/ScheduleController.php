@@ -51,6 +51,7 @@ class ScheduleController extends Controller
                     //return ('OK');
                     $i=date_add($i, date_interval_create_from_date_string("1 day"));
                 }
+                return ('OK');
             }
         } else {
             return ('$findModes is null');
