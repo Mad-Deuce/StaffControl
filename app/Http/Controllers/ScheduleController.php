@@ -23,31 +23,19 @@ class ScheduleController extends Controller
     }
 
     public function add_from_modes(){
-        $findModes = Mode::where('start_mode','>=', '2021-01-01')->where('end_mode','<=', '2021-01-31')->get()->toArray();
+        $findModes = Mode::where('start_mode','>=', '2021-01-01')->where('end_mode','<=', '2021-01-31')->get();
         print_r($findModes);
         echo ('<BR>');
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
-                print_r($findMode);
-                echo ('<BR>');
-                $i = date_create($findMode['start_mode']);
-                $k = date_create($findMode['end_mode']);
-                print_r ($i);
-                echo ('<BR>');
-                print_r ($k);
-                echo ('<BR>');
-                $z=date_diff($i,$k)->d;
-                print_r ($z);
-                echo ('<BR>');
-                //echo ($i=$findMode['end_mode']);
+                $i = date_create($findMode->start_mode);
+                $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    print_r ($i);
                     $schedule=new Schedule();
-                    $schedule->worker_id = $findMode['worker_id'];
+                    $schedule->worker_id = $findMode->worker_id;
                     $schedule->day_of_month = $i;
-                    $schedule->mode_code_id = $findMode['mode_code_id'];
+                    $schedule->mode_code_id = $findMode->mode_code_id;
                     $schedule->save();
-                    //$i=date_add($i, date_interval_create_from_date_string("1 day"));
                 }
                 echo ('OK');
             }
