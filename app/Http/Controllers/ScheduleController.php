@@ -32,7 +32,7 @@ class ScheduleController extends Controller
                 print_r($findMode);
                 echo ('<BR>');
                 echo ($i=$findMode['start_mode']);
-                echo ($i=$i+1);
+                echo ($i=date_add($i, date_interval_create_from_date_string("1 day")););
                 echo ($i=$findMode['end_mode']);
                 for ($i=$findMode['start_mode']; $i<=$findMode['end_mode'];$i=date_add($i, DateInterval('P1D'))) {
                     $schedule=new Schedule();
