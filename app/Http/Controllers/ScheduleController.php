@@ -37,7 +37,7 @@ class ScheduleController extends Controller
                 echo ('<BR>');
                 print_r ($k);
                 echo ('<BR>');
-                $z=date_diff($i,$k);
+                $z=date_diff($i,$k)->d;
                 print_r ($z);
                 echo ('<BR>');
                 //echo ($i=$findMode['end_mode']);
