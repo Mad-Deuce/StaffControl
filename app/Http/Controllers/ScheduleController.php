@@ -25,6 +25,8 @@ class ScheduleController extends Controller
     public function add_from_modes(){
         //$schedule=new Schedule();
         $findModes = Mode::where('start_mode','>=', '2021-01-01')->where('end_mode','<=', '2021-01-31')->get();
+        print_r($findModes);
+        var_dump($findModes);
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
                 for ($i=$findMode->start_mode; $i<=$findMode->end_mode;$i++) {
