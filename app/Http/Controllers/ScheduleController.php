@@ -52,7 +52,7 @@ class ScheduleController extends Controller
                             where('end_mode','<=', $lastDayOfMonth)->get();
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
-                $i = date_create($firstDayOfMonth);
+                $i = $firstDayOfMonth;
                 $k = date_create($findMode->end_mode);
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id','=',$findMode->worker_id)->
@@ -75,7 +75,7 @@ class ScheduleController extends Controller
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
                 $i = date_create($findMode->start_mode);
-                $k = date_create($lastDayOfMonth);
+                $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id','=',$findMode->worker_id)->
                                             where('day_of_month','=',$i)->
@@ -96,8 +96,8 @@ class ScheduleController extends Controller
                             where('end_mode','>', $lastDayOfMonth)->get();
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
-                $i = date_create($firstDayOfMonth);
-                $k = date_create($lastDayOfMonth);
+                $i = $firstDayOfMonth;
+                $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id','=',$findMode->worker_id)->
                     where('day_of_month','=',$i)->
