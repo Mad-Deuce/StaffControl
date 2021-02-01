@@ -39,7 +39,7 @@ class ScheduleController extends Controller
                                              where('mode_code_id', $findMode->mode_code_id)->first();
                     echo ($findMode->worker_id);
                     echo ('<BR>');
-                    echo ($i);
+                    print_r ($i);
                     echo ('<BR>');
                     echo ($findMode->mode_code_id);
                     echo ('<BR>');
@@ -67,7 +67,7 @@ class ScheduleController extends Controller
                                              where('mode_code_id', $findMode->mode_code_id)->first();
                         echo ($findMode->worker_id);
                         echo ('<BR>');
-                        echo ($i);
+                    print_r ($i);
                         echo ('<BR>');
                         echo ($findMode->mode_code_id);
                         echo ('<BR>');
@@ -95,7 +95,7 @@ class ScheduleController extends Controller
                                              where('mode_code_id', $findMode->mode_code_id)->first();
                     echo ($findMode->worker_id);
                     echo ('<BR>');
-                    echo ($i);
+                    print_r ($i);
                     echo ('<BR>');
                     echo ($findMode->mode_code_id);
                     echo ('<BR>');
@@ -124,7 +124,7 @@ class ScheduleController extends Controller
                                              where('mode_code_id', $findMode->mode_code_id)->first();
                     echo ($findMode->worker_id);
                     echo ('<BR>');
-                    echo ($i);
+                    print_r ($i);
                     echo ('<BR>');
                     echo ($findMode->mode_code_id);
                     echo ('<BR>');
