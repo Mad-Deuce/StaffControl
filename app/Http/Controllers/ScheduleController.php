@@ -48,21 +48,19 @@ class ScheduleController extends Controller
                 } else {
                     $i = date_create($findMode->start_mode);
                 }
-                //$i = date_create($findMode->start_mode);
-                //$i = $firstDayOfMonth;
+
                 if ($findMode->end_mode > $lastDayOfMonth){
                     $k = $lastDayOfMonth;
                 } else {
                     $k = date_create($findMode->end_mode);
                 }
-                //$k = date_create($findMode->end_mode);
-                //$k = $lastDayOfMonth;
+
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
                                             where('day_of_month', $i)->
                                             where('mode_code_id', $findMode->mode_code_id)->first();
 
-                    if (isset($findSchedule)===false) {
+                    if (isset($findSchedule)==false) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
