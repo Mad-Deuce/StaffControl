@@ -41,11 +41,21 @@ class ScheduleController extends Controller
         $findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
         print_r($findModes->toArray());
 
- /*       if (isset($findModes)) {
+        if (isset($findModes)) {
             foreach ($findModes as $findMode) {
-                $i = date_create($findMode->start_mode);
+                if ($findMode->start_mode < $firstDayOfMonth){
+                    $i = $firstDayOfMonth;
+                } else {
+                    $i = date_create($findMode->start_mode);
+                }
+                //$i = date_create($findMode->start_mode);
                 //$i = $firstDayOfMonth;
-                $k = date_create($findMode->end_mode);
+                if ($findMode->end_mode > $lastDayOfMonth){
+                    $k = $lastDayOfMonth;
+                } else {
+                    $k = date_create($findMode->end_mode);
+                }
+                //$k = date_create($findMode->end_mode);
                 //$k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
@@ -60,17 +70,11 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK1');
+                echo ('OK');
                 echo ('<BR>');
             }
-        }*/
+        }
         //end
-
-
-
-
-
-
     }
 
 }
