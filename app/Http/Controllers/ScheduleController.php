@@ -60,7 +60,7 @@ class ScheduleController extends Controller
                                             where('day_of_month', $i)->
                                             where('mode_code_id', $findMode->mode_code_id)->first();
 
-                    if (isset($findSchedule)==false) {
+                    if (!isset($findSchedule)) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $i;
