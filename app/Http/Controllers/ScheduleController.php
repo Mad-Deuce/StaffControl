@@ -51,7 +51,8 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK');
+                echo ('OK1');
+                echo ('<BR>');
             }
         }
 
@@ -79,7 +80,8 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK');
+                echo ('OK2');
+                echo ('<BR>');
             }
         }
 
@@ -108,7 +110,8 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK');
+                echo ('OK3');
+                echo ('<BR>');
             }
         }
 
@@ -136,7 +139,8 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK');
+                echo ('OK4');
+                echo ('<BR>');
             }
         }
         print_r($findModes1->toArray());
