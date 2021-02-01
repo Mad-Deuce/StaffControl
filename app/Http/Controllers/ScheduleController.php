@@ -88,25 +88,25 @@ class ScheduleController extends Controller
         $findModes3 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                             where('end_mode','>', $lastDayOfMonth)->get();
         if (isset($findModes3)) {
-            foreach ($findModes3 as $findMode) {
-                $i = date_create($findMode->start_mode);
+            foreach ($findModes3 as $findMode3) {
+                $i = date_create($findMode3->start_mode);
                 $k = $lastDayOfMonth;
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
-                    $findSchedule3=Schedule::where('worker_id', $findMode->worker_id)->
+                    $findSchedule3=Schedule::where('worker_id', $findMode3->worker_id)->
                                              where('day_of_month', $i)->
-                                             where('mode_code_id', $findMode->mode_code_id)->first();
-                    echo ($findMode->worker_id);
+                                             where('mode_code_id', $findMode3->mode_code_id)->first();
+                    echo ($findMode3->worker_id);
                     echo ('<BR>');
                     print_r ($i);
                     echo ('<BR>');
-                    echo ($findMode->mode_code_id);
+                    echo ($findMode3->mode_code_id);
                     echo ('<BR>');
 
                     if (isset($findSchedule3)===false) {
                         $schedule = new Schedule();
-                        $schedule->worker_id = $findMode->worker_id;
+                        $schedule->worker_id = $findMode3->worker_id;
                         $schedule->day_of_month = $i;
-                        $schedule->mode_code_id = $findMode->mode_code_id;
+                        $schedule->mode_code_id = $findMode3->mode_code_id;
                         $schedule->save();
                     }
                 }
@@ -143,6 +143,7 @@ class ScheduleController extends Controller
                 echo ('<BR>');
             }
         }
+
         print_r($findModes1->toArray());
         echo ('<BR>');
         print_r($findModes2->toArray());
