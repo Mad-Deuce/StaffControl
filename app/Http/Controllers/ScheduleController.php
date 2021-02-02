@@ -24,8 +24,8 @@ class ScheduleController extends Controller
 
     public function add_from_modes(){
 
-        $firstDayOfMonth=date_create('2021-01-01');
-        $lastDayOfMonth=date_create('2021-01-31');
+        $firstDayOfMonth =  date_create('2021-01-01');
+        $lastDayOfMonth  =  date_create('2021-01-31');
 
         //start
         $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
@@ -39,7 +39,7 @@ class ScheduleController extends Controller
                              where('start_mode','<=', $lastDayOfMonth)->
                              where('end_mode','>', $lastDayOfMonth)->get();
         $findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
-        print_r($findModes->toArray());
+        //print_r($findModes->toArray());
 
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
@@ -54,6 +54,11 @@ class ScheduleController extends Controller
                 } else {
                     $k = date_create($findMode->end_mode);
                 }
+
+                print_r ($i);
+                echo ('<BR>');
+                print_r ($k);
+                echo ('<BR>');
 
                 for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
