@@ -27,6 +27,11 @@ class ScheduleController extends Controller
         $firstDayOfMonth =  date_create('2021-01-01');
         $lastDayOfMonth  =  date_create('2021-01-31');
 
+        print_r ($firstDayOfMonth);
+        echo ('<BR>');
+        print_r ($lastDayOfMonth);
+        echo ('<BR>');
+
         //start
         $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
                              where('end_mode','<=', $lastDayOfMonth)->get();
