@@ -49,13 +49,13 @@ class ScheduleController extends Controller
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
                 if ($findMode->start_mode < $firstDayOfMonth){
-                    $i = $firstDayOfMonth;
+                    $i = date_create($firstDayOfMonth);
                 } else {
                     $i = date_create($findMode->start_mode);
                 }
 
                 if ($findMode->end_mode > $lastDayOfMonth){
-                    $k = $lastDayOfMonth;
+                    $k = date_create($lastDayOfMonth);
                 } else {
                     $k = date_create($findMode->end_mode);
                 }
