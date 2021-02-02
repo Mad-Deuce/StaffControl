@@ -45,9 +45,16 @@ class ScheduleController extends Controller
                              where('end_mode','>', $lastDayOfMonth)->get();
         $findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
         print_r($findModes->toArray());
+        echo ('<BR>');
 
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
+                echo ('foreach');
+                print_r ($firstDayOfMonth);
+                echo ('<BR>');
+                print_r($findMode->start_mode);
+                echo ('<BR>');
+
                 if ($findMode->start_mode < $firstDayOfMonth){
                     $i = ($firstDayOfMonth); //Блять, пиздец, нихуя не пойму
                 } else {
@@ -59,7 +66,7 @@ class ScheduleController extends Controller
                 } else {
                     $k = date_create($findMode->end_mode);
                 }
-
+                echo ('<BR>');
                 print_r ($i);
                 echo ('<BR>');
                 print_r ($k);
