@@ -72,15 +72,15 @@ class ScheduleController extends Controller
                 print_r ($endDate);
                 echo ('<BR>');
 
-                for ($stDate; $stDate<=$endDate; $stDate=date_add($stDate, date_interval_create_from_date_string("1 day"))) {
+                for ($curDate=clone $stDate; $curDate<=$endDate; $curDate=date_add($curDate, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
-                                            where('day_of_month', $stDate)->
+                                            where('day_of_month', $curDate)->
                                             where('mode_code_id', $findMode->mode_code_id)->first();
 
                     if (!isset($findSchedule)) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
-                        $schedule->day_of_month = $stDate;
+                        $schedule->day_of_month = $curDate;
                         $schedule->mode_code_id = $findMode->mode_code_id;
                         $schedule->save();
                     }
