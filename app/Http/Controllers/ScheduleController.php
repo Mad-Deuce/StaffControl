@@ -56,31 +56,31 @@ class ScheduleController extends Controller
                 echo ('<BR>');
 
                 if (date_create($findMode->start_mode) < $firstDayOfMonth){
-                    $i = clone $firstDayOfMonth; //Блять, пиздец, нихуя не пойму
+                    $stDate = $firstDayOfMonth; //Блять, пиздец, нихуя не пойму
                 } else {
-                    $i = date_create($findMode->start_mode);
+                    $stDate = date_create($findMode->start_mode);
                 }
 
                 if (date_create($findMode->end_mode) > $lastDayOfMonth){
-                    $k = clone $lastDayOfMonth;  //Блять, пиздец, нихуя не пойму
+                    $endDate = $lastDayOfMonth;  //Блять, пиздец, нихуя не пойму
                 } else {
-                    $k = date_create($findMode->end_mode);
+                    $endDate = date_create($findMode->end_mode);
                 }
                 echo ('<BR>');
-                print_r ($i);
+                print_r ($stDate);
                 echo ('<BR>');
-                print_r ($k);
+                print_r ($endDate);
                 echo ('<BR>');
 
-                for ($i; $i<=$k; $i=date_add($i, date_interval_create_from_date_string("1 day"))) {
+                for ($stDate; $stDate<=$endDate; $stDate=date_add($stDate, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
-                                            where('day_of_month', $i)->
+                                            where('day_of_month', $stDate)->
                                             where('mode_code_id', $findMode->mode_code_id)->first();
 
                     if (!isset($findSchedule)) {
                         $schedule = new Schedule();
                         $schedule->worker_id = $findMode->worker_id;
-                        $schedule->day_of_month = $i;
+                        $schedule->day_of_month = $stDate;
                         $schedule->mode_code_id = $findMode->mode_code_id;
                         $schedule->save();
                     }
