@@ -33,17 +33,19 @@ class ScheduleController extends Controller
         echo ('<BR>');
 
         //start
-        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
-                             where('end_mode','<=', $lastDayOfMonth)->get();
-        $findModes2 = Mode:: where('start_mode','<', $firstDayOfMonth)->
-                             where('end_mode','>', $lastDayOfMonth)->get();
-        $findModes3 = Mode:: where('start_mode','<', $firstDayOfMonth)->
-                             where('end_mode','<=', $lastDayOfMonth)->
-                             where('end_mode','>=', $firstDayOfMonth)->get();
-        $findModes4 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
-                             where('start_mode','<=', $lastDayOfMonth)->
-                             where('end_mode','>', $lastDayOfMonth)->get();
-        $findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
+//        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
+//                             where('end_mode','<=', $lastDayOfMonth)->get();
+//        $findModes2 = Mode:: where('start_mode','<', $firstDayOfMonth)->
+//                             where('end_mode','>', $lastDayOfMonth)->get();
+//        $findModes3 = Mode:: where('start_mode','<', $firstDayOfMonth)->
+//                             where('end_mode','<=', $lastDayOfMonth)->
+//                             where('end_mode','>=', $firstDayOfMonth)->get();
+//        $findModes4 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
+//                             where('start_mode','<=', $lastDayOfMonth)->
+//                             where('end_mode','>', $lastDayOfMonth)->get();
+        $findModes = Mode::  where('start_mode','<=', $lastDayOfMonth)->
+                             where('end_mode','>=',  $firstDayOfMonth)->get();
+        //$findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
         print_r($findModes->toArray());
         echo ('<BR>');
 
