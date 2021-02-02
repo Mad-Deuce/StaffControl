@@ -56,13 +56,13 @@ class ScheduleController extends Controller
                 echo ('<BR>');
 
                 if (date_create($findMode->start_mode) < $firstDayOfMonth){
-                    $i = date_create('2021-01-01');; //Блять, пиздец, нихуя не пойму
+                    $i = clone $firstDayOfMonth; //Блять, пиздец, нихуя не пойму
                 } else {
                     $i = date_create($findMode->start_mode);
                 }
 
                 if (date_create($findMode->end_mode) > $lastDayOfMonth){
-                    $k = date_create('2021-01-31');  //Блять, пиздец, нихуя не пойму
+                    $k = clone $lastDayOfMonth;  //Блять, пиздец, нихуя не пойму
                 } else {
                     $k = date_create($findMode->end_mode);
                 }
