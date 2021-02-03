@@ -32,30 +32,11 @@ class ScheduleController extends Controller
         print_r ($lastDayOfMonth);
         echo ('<BR>');
 
-        //start
-//        $findModes1 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
-//                             where('end_mode','<=', $lastDayOfMonth)->get();
-//        $findModes2 = Mode:: where('start_mode','<', $firstDayOfMonth)->
-//                             where('end_mode','>', $lastDayOfMonth)->get();
-//        $findModes3 = Mode:: where('start_mode','<', $firstDayOfMonth)->
-//                             where('end_mode','<=', $lastDayOfMonth)->
-//                             where('end_mode','>=', $firstDayOfMonth)->get();
-//        $findModes4 = Mode:: where('start_mode','>=', $firstDayOfMonth)->
-//                             where('start_mode','<=', $lastDayOfMonth)->
-//                             where('end_mode','>', $lastDayOfMonth)->get();
         $findModes = Mode::  where('start_mode','<=', $lastDayOfMonth)->
                              where('end_mode','>=',  $firstDayOfMonth)->get();
-        //$findModes=$findModes1->merge($findModes2)->merge($findModes3)->merge($findModes4);
-        print_r($findModes->toArray());
-        echo ('<BR>');
 
         if (isset($findModes)) {
             foreach ($findModes as $findMode) {
-                echo ('foreach');
-                print_r ($firstDayOfMonth);
-                echo ('<BR>');
-                print_r($findMode->start_mode);
-                echo ('<BR>');
 
                 if (date_create($findMode->start_mode) < $firstDayOfMonth){
                     $stDate = $firstDayOfMonth; //Блять, пиздец, нихуя не пойму
@@ -68,11 +49,6 @@ class ScheduleController extends Controller
                 } else {
                     $endDate = date_create($findMode->end_mode);
                 }
-                echo ('<BR>');
-                print_r ($stDate);
-                echo ('<BR>');
-                print_r ($endDate);
-                echo ('<BR>');
 
                 for ($curDate=clone $stDate; $curDate<=$endDate; $curDate=date_add($curDate, date_interval_create_from_date_string("1 day"))) {
                     $findSchedule=Schedule::where('worker_id', $findMode->worker_id)->
@@ -91,6 +67,7 @@ class ScheduleController extends Controller
                 echo ('<BR>');
             }
         }
+        return redirect('/schedule');
         //end
     }
 
