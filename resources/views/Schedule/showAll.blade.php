@@ -33,6 +33,8 @@
                  <td><a href="/mode-add/{{$worker->id}}">Добавить неявку</a></td>
              </tr>
          @endforeach
-    </table>
-    <a href="/schedule/add_from_modes">Вставить неявки</a>
+    </table><BR>
+
+    <a href="/schedule/add_from_system_calendar">Вставить выходные дни</a><BR>
+    <a href="/schedule/add_from_modes">Вставить неявки</a><BR>
 @endsection

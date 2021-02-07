@@ -71,4 +71,42 @@ class ScheduleController extends Controller
         //end
     }
 
+    public function add_from_system_calendar(){
+        $firstDayOfMonth =  date_create('2021-01-01');
+        $lastDayOfMonth  =  date_create('2021-01-31');
+
+        $allWorkers=Worker::all();
+
+        //print_r($allWorkers);
+        //echo ('<BR>');
+
+        foreach ($allWorkers as $worker){
+            for ($curDate=clone $firstDayOfMonth; $curDate<=$lastDayOfMonth; $curDate=date_add($curDate, date_interval_create_from_date_string("1 day"))) {
+                $findSchedule=Schedule::where('worker_id', $worker->id)->
+                                        where('day_of_month', $curDate)->first();
+
+                print_r(isset($findSchedule));
+                echo ('<BR>');
+
+                if (!isset($findSchedule)) {
+                    $schedule = new Schedule();
+                    $schedule->worker_id = $worker->id;
+                    $schedule->day_of_month = $curDate;
+
+                    if ( (date_format($curDate,'N')=='6')  ||
+                         (date_format($curDate,'N')=='7') )     {
+                        $schedule->mode_code_id = 31;
+                    } else {
+                        $schedule->mode_code_id = 1;
+                    }
+                    $schedule->save();
+                }
+            }
+        }
+
+        //end
+        return redirect('/schedule');
+        //end
+    }
+
 }

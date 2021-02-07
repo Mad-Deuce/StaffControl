@@ -26,5 +26,6 @@ Route::get('/worker-add', [WorkerController::class, 'addOne']);
 
 Route::get('/schedule', [ScheduleController::class, 'showAll']);
 Route::get('/schedule/add_from_modes', [ScheduleController::class, 'add_from_modes']);
+Route::get('/schedule/add_from_system_calendar', [ScheduleController::class, 'add_from_system_calendar']);
 
 Route::get('/mode-add/{worker_id}', [ModeController::class, 'addOne']);
