@@ -11,16 +11,62 @@ use Illuminate\Support\Facades\DB;
 class ScheduleController extends Controller
 {
     public function showAll(){
-        //$workers=Worker::all();
-        $workers = DB::select(' select  workers.id,
-                                        surname, (substring (name,1,1)||\'.\'|| substring (patronymic,1,1)||\'.\') as initials,
-                                        positions.short_title as position
-                                from workers
-                                join positions
-                                on workers.position_id=positions.id
-                                where workers.deleted_at IS NULL');
-        return view('Schedule.showAll', ['workers'=>$workers]);
+
+        //Вариант 1 - есть возможность осортировать по табельному номеру
+        $schedules = DB::select('SELECT * FROM public.view_schedules');
+
+        $schedulesArray[] = array (
+            array(  'id'=>"",
+                    'name'=>"",
+                    'position'=>"",
+                    'modes'=>array(),
+                    'sum'=>"",
+                )
+        );
+
+        foreach ($schedules as $schedule) {
+
+            //Вариант 1
+            $arrID=     ($schedule->wid);
+            $arrName=   ($schedule->wsurname).' '.
+                        mb_substr($schedule->wname,0,1,'UTF-8').'.'.
+                        mb_substr($schedule->wpatronymic,0,1,'UTF-8').'.';
+            $arrPosition=($schedule->wposition);
+
+            $arrDOM=($schedule->dofmonth);
+            $arrCode=($schedule->mcodes);
+
+            if (!array_key_exists($arrID,$schedulesArray)) {
+                $arrSum=0;
+                if ($arrCode==='Р'){
+                    $arrCode=8;
+                    $arrSum=$arrSum+$arrCode;
+                }
+                $schedulesArray[$arrID]['id']=$arrID;
+                $schedulesArray[$arrID]['name']=$arrName;
+                $schedulesArray[$arrID]['position']=$arrPosition;
+                $schedulesArray[$arrID]['modes'][$arrDOM]=$arrCode;
+                $schedulesArray[$arrID]['sum']=$arrSum;
+            } else {
+                if ($arrCode==='Р'){
+                    $arrCode=8;
+                    $arrSum=$arrSum+$arrCode;
+                }
+                $schedulesArray[$arrID]['modes'][$arrDOM]=$arrCode;
+                $schedulesArray[$arrID]['sum']=$arrSum;
+            }
+
+        }
+
+        unset($schedulesArray[0]);          //Удаляет элемент с индексом "0", остальные индексы не меняются
+
+        return view('Schedule.showAll', ['schedulesArray'=>$schedulesArray]);
     }
+
+
+
+
+
 
     public function add_from_modes(){
 
@@ -68,7 +114,6 @@ class ScheduleController extends Controller
             }
         }
         return redirect('/schedule');
-        //end
     }
 
     public function add_from_system_calendar(){
@@ -76,9 +121,6 @@ class ScheduleController extends Controller
         $lastDayOfMonth  =  date_create('2021-01-31');
 
         $allWorkers=Worker::all();
-
-        //print_r($allWorkers);
-        //echo ('<BR>');
 
         foreach ($allWorkers as $worker){
             for ($curDate=clone $firstDayOfMonth; $curDate<=$lastDayOfMonth; $curDate=date_add($curDate, date_interval_create_from_date_string("1 day"))) {
@@ -104,9 +146,12 @@ class ScheduleController extends Controller
             }
         }
 
-        //end
         return redirect('/schedule');
-        //end
+    }
+
+    public function delete(){
+        $deleted = DB::delete('delete from schedules');
+        return redirect('/schedule');
     }
 
 }

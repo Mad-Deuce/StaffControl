@@ -15,6 +15,8 @@ use App\Http\Controllers\ScheduleController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Artisan::call('view:clear');
+
 
 Route::get('/', function () {
     return view('mainPage');
@@ -27,5 +29,6 @@ Route::get('/worker-add', [WorkerController::class, 'addOne']);
 Route::get('/schedule', [ScheduleController::class, 'showAll']);
 Route::get('/schedule/add_from_modes', [ScheduleController::class, 'add_from_modes']);
 Route::get('/schedule/add_from_system_calendar', [ScheduleController::class, 'add_from_system_calendar']);
+Route::get('/schedule/delete', [ScheduleController::class, 'delete']);
 
 Route::get('/mode-add/{worker_id}', [ModeController::class, 'addOne']);
