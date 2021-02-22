@@ -5,12 +5,22 @@ namespace App\Http\Controllers;
 use App\Models\Mode;
 use App\Models\Schedule;
 use App\Models\Worker;
+
+use App\Exports\SchedulesExport;
+
 use Illuminate\Http\Request;
+
 use Illuminate\Support\Facades\DB;
+
+//use Maatwebsite\Excel\Excel;
+use Maatwebsite\Excel\Facades\Excel;
 
 class ScheduleController extends Controller
 {
     public function showAll(){
+
+        //self::add_from_modes();
+        //self::add_from_system_calendar();
 
         //Вариант 1 - есть возможность осортировать по табельному номеру
         $schedules = DB::select('SELECT * FROM public.view_schedules');
@@ -61,22 +71,13 @@ class ScheduleController extends Controller
         unset($schedulesArray[0]);          //Удаляет элемент с индексом "0", остальные индексы не меняются
 
         return view('Schedule.showAll', ['schedulesArray'=>$schedulesArray]);
+
     }
-
-
-
-
-
 
     public function add_from_modes(){
 
         $firstDayOfMonth =  date_create('2021-01-01');
         $lastDayOfMonth  =  date_create('2021-01-31');
-
-        print_r ($firstDayOfMonth);
-        echo ('<BR>');
-        print_r ($lastDayOfMonth);
-        echo ('<BR>');
 
         $findModes = Mode::  where('start_mode','<=', $lastDayOfMonth)->
                              where('end_mode','>=',  $firstDayOfMonth)->get();
@@ -109,8 +110,6 @@ class ScheduleController extends Controller
                         $schedule->save();
                     }
                 }
-                echo ('OK');
-                echo ('<BR>');
             }
         }
         return redirect('/schedule');
@@ -126,9 +125,6 @@ class ScheduleController extends Controller
             for ($curDate=clone $firstDayOfMonth; $curDate<=$lastDayOfMonth; $curDate=date_add($curDate, date_interval_create_from_date_string("1 day"))) {
                 $findSchedule=Schedule::where('worker_id', $worker->id)->
                                         where('day_of_month', $curDate)->first();
-
-                print_r(isset($findSchedule));
-                echo ('<BR>');
 
                 if (!isset($findSchedule)) {
                     $schedule = new Schedule();
@@ -154,4 +150,10 @@ class ScheduleController extends Controller
         return redirect('/schedule');
     }
 
+    public function export_to_excel(){
+
+        //self::showAll('export_to_excel');   //так НЕ работает
+        return Excel::download(new SchedulesExport, 'schedule.xlsx');    //так работает
+
+    }
 }

@@ -30,5 +30,15 @@ Route::get('/schedule', [ScheduleController::class, 'showAll']);
 Route::get('/schedule/add_from_modes', [ScheduleController::class, 'add_from_modes']);
 Route::get('/schedule/add_from_system_calendar', [ScheduleController::class, 'add_from_system_calendar']);
 Route::get('/schedule/delete', [ScheduleController::class, 'delete']);
+Route::get('/schedule/export_to_excel', [ScheduleController::class, 'export_to_excel']);
 
 Route::get('/mode-add/{worker_id}', [ModeController::class, 'addOne']);
+
+Route::get('/clear', function() {
+    Artisan::call('cache:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+    Artisan::call('backup:clean');
+    return "Кэш очищен.";
+});
