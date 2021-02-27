@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TimeSheetController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WorkerController;
 use App\Http\Controllers\ModeController;
@@ -31,6 +32,9 @@ Route::get('/schedule/add_from_modes', [ScheduleController::class, 'add_from_mod
 Route::get('/schedule/add_from_system_calendar', [ScheduleController::class, 'add_from_system_calendar']);
 Route::get('/schedule/delete', [ScheduleController::class, 'delete']);
 Route::get('/schedule/export_to_excel', [ScheduleController::class, 'export_to_excel']);
+
+Route::get('/time-sheet', [TimeSheetController::class, 'showAll']);
+
 
 Route::get('/mode-add/{worker_id}', [ModeController::class, 'addOne']);
 

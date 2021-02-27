@@ -18,6 +18,8 @@ class CreateScheduleTable extends Migration
                 $table->id();
                 $table->bigInteger('user_id');
                 $table->date('day_of_month');
+                $table->string('type_of_day');
+                $table->smallserial('hour');
                 $table->bigInteger('mode_codes_id');
                 $table->timestamps();
             });

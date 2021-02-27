@@ -8,11 +8,8 @@ use App\Models\Worker;
 
 use App\Exports\SchedulesExport;
 
-use Illuminate\Http\Request;
-
 use Illuminate\Support\Facades\DB;
 
-//use Maatwebsite\Excel\Excel;
 use Maatwebsite\Excel\Facades\Excel;
 
 class ScheduleController extends Controller
@@ -107,7 +104,17 @@ class ScheduleController extends Controller
                         $schedule->worker_id = $findMode->worker_id;
                         $schedule->day_of_month = $curDate;
                         $schedule->mode_code_id = $findMode->mode_code_id;
-                        $schedule->save();
+
+                        if ( (date_format($curDate,'N')=='6')  ||
+                            (date_format($curDate,'N')=='7') )     {
+                            $schedule->type_of_day = 'r';
+                            $schedule->hour = null;
+                        } else {
+                            $schedule->type_of_day = 'w';
+                            $schedule->hour = 8;
+                        }
+
+                         $schedule->save();
                     }
                 }
             }
@@ -134,8 +141,12 @@ class ScheduleController extends Controller
                     if ( (date_format($curDate,'N')=='6')  ||
                          (date_format($curDate,'N')=='7') )     {
                         $schedule->mode_code_id = 31;
+                        $schedule->type_of_day = 'r';
+                        $schedule->hour = null;
                     } else {
                         $schedule->mode_code_id = 1;
+                        $schedule->type_of_day = 'w';
+                        $schedule->hour = 8;
                     }
                     $schedule->save();
                 }
