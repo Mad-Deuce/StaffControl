@@ -53,7 +53,7 @@ class TimeSheetController extends Controller
                 'sum_r_day9'=>"",
                 'sum_r_hour9'=>"",
                 'sum_r_day10'=>"",
-                'sum_r_hour11'=>"",
+                'sum_r_hour10'=>"",
             )
         );
 
@@ -68,7 +68,9 @@ class TimeSheetController extends Controller
                         ($schedule->wpatronymic);
             $arrPosition=($schedule->wposition);
 
-            $arrDOM=($schedule->dofmonth);
+            //$arrDOM=date_format(date_create($schedule->dofmonth),'j');
+            $arrDOM=idate('d', strtotime($schedule->dofmonth));
+            //(date_format($curDate,'N')=='6')
             $arrMHour=($schedule->hour);
             $arrMCode=($schedule->mcodes);
             $arrMAtoHour=null;
@@ -99,7 +101,7 @@ class TimeSheetController extends Controller
                 $Arr_sum_r_day9=0;
                 $Arr_sum_r_hour9=0;
                 $Arr_sum_r_day10=0;
-                $Arr_sum_r_hour11=0;
+                $Arr_sum_r_hour10=0;
 
                 if ($arrMCode==='Р'){
                     $Arr_sum_w_day=$Arr_sum_w_day+1;
@@ -109,6 +111,8 @@ class TimeSheetController extends Controller
                     $arrMAtoCode='АТО';
                 }
                 $schedulesArray[$arrID]['id']=$arrID;
+                $schedulesArray[$arrID]['tab_number']=$arrTNumber;
+                $schedulesArray[$arrID]['gender']=$arrGender;
                 $schedulesArray[$arrID]['name']=$arrName;
                 $schedulesArray[$arrID]['position']=$arrPosition;
                 $schedulesArray[$arrID]['modes'][$arrDOM]['m_date']=$arrDOM;
@@ -119,6 +123,30 @@ class TimeSheetController extends Controller
                 $schedulesArray[$arrID]['sum_w_day']=$Arr_sum_w_day;
                 $schedulesArray[$arrID]['sum_w_hour']=$Arr_sum_w_hour;
                 $schedulesArray[$arrID]['sum_w_ato_hour']=$Arr_sum_w_ato_hour;
+
+                $schedulesArray[$arrID]['sum_r_hour']=$Arr_sum_r_hour;
+                $schedulesArray[$arrID]['sum_r_hour1']=$Arr_sum_r_hour1;
+                $schedulesArray[$arrID]['sum_r_hour2']=$Arr_sum_r_hour2;
+                $schedulesArray[$arrID]['sum_r_hour3']=$Arr_sum_r_hour3;
+                $schedulesArray[$arrID]['sum_r_hour4']=$Arr_sum_r_hour4;
+                $schedulesArray[$arrID]['sum_r_hour5']=$Arr_sum_r_hour5;
+                $schedulesArray[$arrID]['sum_r_hour6']=$Arr_sum_r_hour6;
+                $schedulesArray[$arrID]['sum_r_hour7']=$Arr_sum_r_hour7;
+                $schedulesArray[$arrID]['sum_r_hour8']=$Arr_sum_r_hour8;
+                $schedulesArray[$arrID]['sum_r_hour9']=$Arr_sum_r_hour9;
+                $schedulesArray[$arrID]['sum_r_hour1']=$Arr_sum_r_hour10;
+
+                $schedulesArray[$arrID]['sum_r_day']=$Arr_sum_r_day;
+                $schedulesArray[$arrID]['sum_r_day1']=$Arr_sum_r_day1;
+                $schedulesArray[$arrID]['sum_r_day2']=$Arr_sum_r_day2;
+                $schedulesArray[$arrID]['sum_r_day3']=$Arr_sum_r_day3;
+                $schedulesArray[$arrID]['sum_r_day4']=$Arr_sum_r_day4;
+                $schedulesArray[$arrID]['sum_r_day5']=$Arr_sum_r_day5;
+                $schedulesArray[$arrID]['sum_r_day6']=$Arr_sum_r_day6;
+                $schedulesArray[$arrID]['sum_r_day7']=$Arr_sum_r_day7;
+                $schedulesArray[$arrID]['sum_r_day8']=$Arr_sum_r_day8;
+                $schedulesArray[$arrID]['sum_r_day9']=$Arr_sum_r_day9;
+                $schedulesArray[$arrID]['sum_r_day10']=$Arr_sum_r_day10;
 
                 //$schedulesArray[$arrID]['sum']=$arrSum;
                 //print_r($schedulesArray);
@@ -143,6 +171,30 @@ class TimeSheetController extends Controller
                 $schedulesArray[$arrID]['sum_w_day']=$Arr_sum_w_day;
                 $schedulesArray[$arrID]['sum_w_hour']=$Arr_sum_w_hour;
                 $schedulesArray[$arrID]['sum_w_ato_hour']=$Arr_sum_w_ato_hour;
+
+                $schedulesArray[$arrID]['sum_r_hour']=$Arr_sum_r_hour;
+                $schedulesArray[$arrID]['sum_r_hour1']=$Arr_sum_r_hour1;
+                $schedulesArray[$arrID]['sum_r_hour2']=$Arr_sum_r_hour2;
+                $schedulesArray[$arrID]['sum_r_hour3']=$Arr_sum_r_hour3;
+                $schedulesArray[$arrID]['sum_r_hour4']=$Arr_sum_r_hour4;
+                $schedulesArray[$arrID]['sum_r_hour5']=$Arr_sum_r_hour5;
+                $schedulesArray[$arrID]['sum_r_hour6']=$Arr_sum_r_hour6;
+                $schedulesArray[$arrID]['sum_r_hour7']=$Arr_sum_r_hour7;
+                $schedulesArray[$arrID]['sum_r_hour8']=$Arr_sum_r_hour8;
+                $schedulesArray[$arrID]['sum_r_hour9']=$Arr_sum_r_hour9;
+                $schedulesArray[$arrID]['sum_r_hour1']=$Arr_sum_r_hour10;
+
+                $schedulesArray[$arrID]['sum_r_day']=$Arr_sum_r_day;
+                $schedulesArray[$arrID]['sum_r_day1']=$Arr_sum_r_day1;
+                $schedulesArray[$arrID]['sum_r_day2']=$Arr_sum_r_day2;
+                $schedulesArray[$arrID]['sum_r_day3']=$Arr_sum_r_day3;
+                $schedulesArray[$arrID]['sum_r_day4']=$Arr_sum_r_day4;
+                $schedulesArray[$arrID]['sum_r_day5']=$Arr_sum_r_day5;
+                $schedulesArray[$arrID]['sum_r_day6']=$Arr_sum_r_day6;
+                $schedulesArray[$arrID]['sum_r_day7']=$Arr_sum_r_day7;
+                $schedulesArray[$arrID]['sum_r_day8']=$Arr_sum_r_day8;
+                $schedulesArray[$arrID]['sum_r_day9']=$Arr_sum_r_day9;
+                $schedulesArray[$arrID]['sum_r_day10']=$Arr_sum_r_day10;
             }
 
         }
