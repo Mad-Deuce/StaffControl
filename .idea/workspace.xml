@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb2fe463-1a8e-421c-879e-b57f913b17c7" name="Default Changelist" comment="Табель veb" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/barryvdh/laravel-debugbar" />
+      <path value="$PROJECT_DIR$/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/ezyang/htmlpurifier" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/fakerphp/faker" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/graham-campbell/result-type" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/laravel/sail" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/mime-type-detection" />
+      <path value="$PROJECT_DIR$/vendor/maatwebsite/excel" />
+      <path value="$PROJECT_DIR$/vendor/maennchen/zipstream-php" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/complex" />
+      <path value="$PROJECT_DIR$/vendor/markbaker/matrix" />
+      <path value="$PROJECT_DIR$/vendor/maximebf/debugbar" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/php-enum" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/phpoffice/phpspreadsheet" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-invoker" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-client" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/cli-parser" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/complexity" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/lines-of-code" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/debug" />
+      <path value="$PROJECT_DIR$/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-client-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1nWCwU916B02RuEhmECYwICXldR" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/TimeSheet" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\TimeSheet" />
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Exports" />
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Schedule" />
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Modes" />
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Workers" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bb2fe463-1a8e-421c-879e-b57f913b17c7" name="Default Changelist" comment="" />
+      <created>1611496702455</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1611496702455</updated>
+      <workItem from="1611496706302" duration="674000" />
+      <workItem from="1611506568771" duration="13170000" />
+      <workItem from="1611548777626" duration="3812000" />
+      <workItem from="1611603907426" duration="7622000" />
+      <workItem from="1611688913804" duration="11730000" />
+      <workItem from="1611858919419" duration="8145000" />
+      <workItem from="1611998430433" duration="22600000" />
+      <workItem from="1612087293729" duration="21228000" />
+      <workItem from="1612155723025" duration="1354000" />
+      <workItem from="1612193526192" duration="5853000" />
+      <workItem from="1612292123846" duration="7238000" />
+      <workItem from="1612381087432" duration="3167000" />
+      <workItem from="1612617161185" duration="7749000" />
+      <workItem from="1612701577630" duration="4964000" />
+      <workItem from="1612706885502" duration="617000" />
+      <workItem from="1612720309368" duration="9562000" />
+      <workItem from="1612771267417" duration="602000" />
+      <workItem from="1612980354800" duration="106000" />
+      <workItem from="1613072329324" duration="16429000" />
+      <workItem from="1613112089867" duration="2998000" />
+      <workItem from="1613218211079" duration="4237000" />
+      <workItem from="1613237828001" duration="13337000" />
+      <workItem from="1613505026414" duration="1978000" />
+      <workItem from="1613567358319" duration="13844000" />
+      <workItem from="1613922057662" duration="8352000" />
+      <workItem from="1613941796968" duration="185000" />
+      <workItem from="1614020958517" duration="5767000" />
+      <workItem from="1614444903198" duration="14727000" />
+      <workItem from="1614511616377" duration="5147000" />
+      <workItem from="1615016875487" duration="793000" />
+      <workItem from="1615225608556" duration="326000" />
+    </task>
+    <task id="LOCAL-00110" summary="add func &quot;add_from_modes&quot;">
+      <created>1612123900833</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1612123900833</updated>
+    </task>
+    <task id="LOCAL-00111" summary="add func &quot;add_from_modes&quot;">
+      <created>1612124097788</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1612124097788</updated>
+    </task>
+    <task id="LOCAL-00112" summary="add func &quot;add_from_modes&quot;">
+      <created>1612124129036</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1612124129036</updated>
+    </task>
+    <task id="LOCAL-00113" summary="add func &quot;add_from_modes&quot;">
+      <created>1612124485131</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1612124485131</updated>
+    </task>
+    <task id="LOCAL-00114" summary="add func &quot;add_from_modes&quot;">
+      <created>1612125906276</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1612125906276</updated>
+    </task>
+    <task id="LOCAL-00115" summary="add func &quot;add_from_modes&quot;">
+      <created>1612125961180</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1612125961180</updated>
+    </task>
+    <task id="LOCAL-00116" summary="add func &quot;add_from_modes&quot;2">
+      <created>1612126227610</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1612126227610</updated>
+    </task>
+    <task id="LOCAL-00117" summary="add func &quot;add_from_modes&quot;3">
+      <created>1612126833431</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1612126833431</updated>
+    </task>
+    <task id="LOCAL-00118" summary="add func &quot;add_from_modes&quot;3">
+      <created>1612127217978</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1612127217978</updated>
+    </task>
+    <task id="LOCAL-00119" summary="add func &quot;add_from_modes&quot;3">
+      <created>1612128417554</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1612128417554</updated>
+    </task>
+    <task id="LOCAL-00120" summary="add func &quot;add_from_modes&quot;3">
+      <created>1612128734765</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1612128734765</updated>
+    </task>
+    <task id="LOCAL-00121" summary="add func &quot;add_from_modes&quot;3">
+      <created>1612128991720</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1612128991720</updated>
+    </task>
+    <task id="LOCAL-00122" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612129805530</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1612129805530</updated>
+    </task>
+    <task id="LOCAL-00123" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612129953613</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1612129953613</updated>
+    </task>
+    <task id="LOCAL-00124" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612130829096</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1612130829096</updated>
+    </task>
+    <task id="LOCAL-00125" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612131448801</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1612131448801</updated>
+    </task>
+    <task id="LOCAL-00126" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612131803840</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1612131803840</updated>
+    </task>
+    <task id="LOCAL-00127" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612132217900</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1612132217900</updated>
+    </task>
+    <task id="LOCAL-00128" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612132726069</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1612132726069</updated>
+    </task>
+    <task id="LOCAL-00129" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612132971693</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1612132971693</updated>
+    </task>
+    <task id="LOCAL-00130" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612133226759</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1612133226759</updated>
+    </task>
+    <task id="LOCAL-00131" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612156036427</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1612156036427</updated>
+    </task>
+    <task id="LOCAL-00132" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612156202010</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1612156202010</updated>
+    </task>
+    <task id="LOCAL-00133" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612156826877</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1612156826877</updated>
+    </task>
+    <task id="LOCAL-00134" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612207072492</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1612207072492</updated>
+    </task>
+    <task id="LOCAL-00135" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612207473922</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1612207473922</updated>
+    </task>
+    <task id="LOCAL-00136" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612210029725</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1612210029725</updated>
+    </task>
+    <task id="LOCAL-00137" summary="add func &quot;add_from_modes&quot;4">
+      <created>1612210396124</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1612210396124</updated>
+    </task>
+    <task id="LOCAL-00138" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612210893838</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1612210893838</updated>
+    </task>
+    <task id="LOCAL-00139" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612211944662</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1612211944662</updated>
+    </task>
+    <task id="LOCAL-00140" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612212092039</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1612212092039</updated>
+    </task>
+    <task id="LOCAL-00141" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612293853140</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1612293853140</updated>
+    </task>
+    <task id="LOCAL-00142" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612294445479</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1612294445479</updated>
+    </task>
+    <task id="LOCAL-00143" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612294985470</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1612294985470</updated>
+    </task>
+    <task id="LOCAL-00144" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612296150827</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1612296150827</updated>
+    </task>
+    <task id="LOCAL-00145" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612296821431</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1612296821431</updated>
+    </task>
+    <task id="LOCAL-00146" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612297112221</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1612297112221</updated>
+    </task>
+    <task id="LOCAL-00147" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612297788193</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1612297788193</updated>
+    </task>
+    <task id="LOCAL-00148" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612297892883</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1612297892883</updated>
+    </task>
+    <task id="LOCAL-00149" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612298355659</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1612298355659</updated>
+    </task>
+    <task id="LOCAL-00150" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612298734782</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1612298734782</updated>
+    </task>
+    <task id="LOCAL-00151" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612299099349</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1612299099349</updated>
+    </task>
+    <task id="LOCAL-00152" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612299487439</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1612299487439</updated>
+    </task>
+    <task id="LOCAL-00153" summary="add func &quot;add_from_modes&quot;5">
+      <created>1612383275323</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1612383275323</updated>
+    </task>
+    <task id="LOCAL-00154" summary="add func &quot;add_from_system_calendar&quot;">
+      <created>1612726158773</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1612726158773</updated>
+    </task>
+    <task id="LOCAL-00155" summary="График формируется в html">
+      <created>1613251686609</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1613251686610</updated>
+    </task>
+    <task id="LOCAL-00156" summary="График ЭКСПОРТ в EXCEL+">
+      <created>1614028164898</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1614028164899</updated>
+    </task>
+    <task id="LOCAL-00157" summary="Табель шапка+формирование массива">
+      <created>1614462296305</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1614462296306</updated>
+    </task>
+    <task id="LOCAL-00158" summary="Табель veb">
+      <created>1614516755720</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1614516755720</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Редактирование миграции modes 2" />
+    <MESSAGE value="Редактирование миграции modes 3" />
+    <MESSAGE value="Редактирование view addOne" />
+    <MESSAGE value="Редактирование view addOne 2" />
+    <MESSAGE value="Редактирование view showAll" />
+    <MESSAGE value="отношения position to worker hasmany" />
+    <MESSAGE value="отношения position to worker hasmany 2" />
+    <MESSAGE value="add mode 1" />
+    <MESSAGE value="add mode 2" />
+    <MESSAGE value="add mode 3" />
+    <MESSAGE value="add mode 4" />
+    <MESSAGE value="add mode 5" />
+    <MESSAGE value="add mode 6" />
+    <MESSAGE value="add график" />
+    <MESSAGE value="add migration schedule" />
+    <MESSAGE value="add func &quot;add_from_modes&quot;" />
+    <MESSAGE value="add func &quot;add_from_modes&quot;2" />
+    <MESSAGE value="add func &quot;add_from_modes&quot;3" />
+    <MESSAGE value="add func &quot;add_from_modes&quot;4" />
+    <MESSAGE value="add func &quot;add_from_modes&quot;5" />
+    <MESSAGE value="add func &quot;add_from_system_calendar&quot;" />
+    <MESSAGE value="График формируется в html" />
+    <MESSAGE value="График ЭКСПОРТ в EXCEL+" />
+    <MESSAGE value="Табель шапка+формирование массива" />
+    <MESSAGE value="Табель veb" />
+    <option name="LAST_COMMIT_MESSAGE" value="Табель veb" />
+  </component>
+</project>
