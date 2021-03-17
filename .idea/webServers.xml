@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="3bcf2904-6704-4eb6-9488-f8e949e3d286" name="host3.ubuntu" url="http://192.168.0.105">
+      <webServer id="f760adfa-cdfd-491f-80f6-a1f7132efd9a" name="host3.ubuntu" url="http://192.168.0.105">
         <fileTransfer rootFolder="/var/www/host3.localhost/StaffControl" host="192.168.0.105" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
