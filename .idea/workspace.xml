@@ -4,187 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb2fe463-1a8e-421c-879e-b57f913b17c7" name="Default Changelist" comment="Табель veb">
-      <change beforePath="$PROJECT_DIR$/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.env.example" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+    <list default="true" id="bb2fe463-1a8e-421c-879e-b57f913b17c7" name="Default Changelist" comment="проект начат с нуля, настроена подключение к базе данных + настроена аутонтефикация">
       <change beforePath="$PROJECT_DIR$/.idea/StaffControl.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/StaffControl.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webServers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.styleci.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Exports/SchedulesExport.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ModeController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ScheduleController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TimeSheetController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/WorkerController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/EncryptCookies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/PreventRequestsDuringMaintenance.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrimStrings.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustHosts.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/TrustProxies.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/VerifyCsrfToken.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mode.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Mode_code.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Position.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Schedule.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Worker.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/BroadcastServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/EventServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/artisan" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/broadcasting.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cache.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/cors.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/database.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/excel.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/filesystems.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/hashing.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/logging.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/queue.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/services.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/session.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/view.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/UserFactory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_26_203610_create_positions_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_200204_create_modes_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_202848_create_mode_codes_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_31_101845_create_schedule_table.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/php_errors.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/auth.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/pagination.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/passwords.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/validation.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Exports/schedule.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Modes/addOne.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Schedule/showAll.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/TimeSheet/showAll.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Workers/addOne.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Workers/showAll.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/mainPage.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/console.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/app/public/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X01c90bfdcdc8c53ea300afbec42d858c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0314cf30f4bfe69566b8c3bdfc2850ca.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X06273828c91a2a59dfc175c1e5b91515.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X06d3157a4d5a3eb111c4bd27c682ce63.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X0965aa4f48726ab7e8f698c2a396a069.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X111584fefa3fdbe4055573fe51d22289.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X11caedff03cc532acfbe2abe5d67ea57.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X161d1ff21f2400a71414a894866984c6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X18a31b545df2b864bab0ee0a5f6dc073.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1c89d60881575c62943b680e367312f5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X1e7c993243984f7a7335ec2484b34a92.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X21b07f3f538f4e463a6f7debb5f447fa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X2c90d557d58b461c1cba39de620facf7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X36935975e00e7c41dbe9b9d899011267.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X3830d4e3d06388adc976dc503a770691.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X38fbd1fb722c6a9faf71f12fc3448c3e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X401b6fef7fb572d1c050eef936198e28.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X409fb33b2e614f0979fbb08a2eb8ee33.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X450ca3212e5a9c08cd7c41ce2a359a16.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X48fe999dcd80197e162f63231a579054.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4b257773ef088f45d91b2710cc1ba13b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4b8780d3c6308596d3b84bc7046013da.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4df6a5069ca28a742a40aab67c7a5b89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X4f5cd94ac6ecb73e1629a5ba63d3ea58.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X508ae29970d82bbd669e963fe69913aa.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X52866cad1f9aebe8bca1bd3a4b2c536d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X55d25b6f362f48bd44124a66326861ff.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X5f2df5c284569ed5c4dba28e17682595.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6253b84fc1474239507f52405542b445.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X6d2da997c13c92ac0db6238beb49af00.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X71a7753d854cdad4ade2a46ee36aa0ef.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X7528bca8937d3a8b0a6c003e3d196628.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X79b561f2e445ee5ca79109b8f42515ed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X85e0c64ae27144cd86adba386398fec4.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X88d692159e146aff08aec6393aa3cbed.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8a1420edf9bcf24de1b09ee1aaa62407.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8aaa918e0b9830fda2a84fe3629978ce.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X8ba15292659c40661a5386deece8d3d5.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X968f15ec8f4a366c7ce19d4ecbdb02ac.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X977f8cad4e33d05f6d7f68dabb6665a0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/X9befbb0a6a5972c3d77e2f253871b6b7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa106f5c21cde32067451f7856e91e92f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xa87a8f56d6eeb293269286bc947afa53.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xac1c75f96f3f1a542f4c2825282cb783.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb4f9858bf79f9705eaf8a0a87e4682c1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xb90ab8178306844968ceaebf71860492.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc1842cd57844d95b105a88dbfc94a563.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc191911ac3f3d851c509008e63ab6403.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc1c1eb1635b89efb11e714d05e0569f0.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc301315fbee57d37c61c03b2e89544a1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xc54e40a33d0303afb2f94aba9fe206a6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xca41e626a22b6dae7c706f4b4fd69e18.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xce90cd91db1e45aede336287c2f3db5c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd11cd780167a0f7e31e0813712257a97.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd172e093d1a5e62e660e4754f16986a1.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xd761c6ca8460d14d579d5bf0aa30905d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe1f063636cb3e3f5e990ec4a908c0cf6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe61cf23333e945cdf0b39c97a8c70139.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xe9026aedd13cedf7be1f9e98eb81afeb.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xec13b470313dbadc0d0c71bd956a06d6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf18811361b0ed64481e266fd1a1aa4c2.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf3efcc811f67b813f48bb2d85ee544cc.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/debugbar/Xf4f9bce7744385a1372c20af8ad13b3d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/cache/data/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/sessions/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/testing/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/framework/views/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/storage/logs/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/export.model.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/export.plain.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/export.query-model.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/export.query.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/import.collection.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stubs/import.model.stub" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/CreatesApplication.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/TestCase.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,6 +131,8 @@
       <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
       <path value="$PROJECT_DIR$/vendor/laravel/sail" />
       <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1nWCwU916B02RuEhmECYwICXldR" />
@@ -339,6 +164,9 @@
       <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Schedule" />
       <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Modes" />
       <recent name="C:\Users\admin\PhpstormProjects\StaffControl\resources\views\Workers" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\admin\PhpstormProjects\StaffControl\app\Http\Controllers\Auth" />
     </key>
   </component>
   <component name="RunManager">
@@ -388,14 +216,11 @@
       <workItem from="1615225608556" duration="326000" />
       <workItem from="1615845724863" duration="222000" />
       <workItem from="1615917603676" duration="5302000" />
-      <workItem from="1616002848438" duration="2962000" />
-    </task>
-    <task id="LOCAL-00110" summary="add func &quot;add_from_modes&quot;">
-      <created>1612123900833</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1612123900833</updated>
+      <workItem from="1616002848438" duration="3085000" />
+      <workItem from="1616226137131" duration="11197000" />
+      <workItem from="1616265990164" duration="612000" />
+      <workItem from="1616348453210" duration="3506000" />
+      <workItem from="1616529855234" duration="300000" />
     </task>
     <task id="LOCAL-00111" summary="add func &quot;add_from_modes&quot;">
       <created>1612124097788</created>
@@ -733,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614516755720</updated>
     </task>
-    <option name="localTasksCounter" value="159" />
+    <task id="LOCAL-00159" summary="проект начат с нуля, настроена подключение к базе данных + настроена аутонтефикация">
+      <created>1616005955020</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1616005955021</updated>
+    </task>
+    <option name="localTasksCounter" value="160" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -764,7 +596,6 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Редактирование миграции modes 2" />
     <MESSAGE value="Редактирование миграции modes 3" />
     <MESSAGE value="Редактирование view addOne" />
     <MESSAGE value="Редактирование view addOne 2" />
@@ -789,6 +620,7 @@
     <MESSAGE value="График ЭКСПОРТ в EXCEL+" />
     <MESSAGE value="Табель шапка+формирование массива" />
     <MESSAGE value="Табель veb" />
-    <option name="LAST_COMMIT_MESSAGE" value="Табель veb" />
+    <MESSAGE value="проект начат с нуля, настроена подключение к базе данных + настроена аутонтефикация" />
+    <option name="LAST_COMMIT_MESSAGE" value="проект начат с нуля, настроена подключение к базе данных + настроена аутонтефикация" />
   </component>
 </project>
